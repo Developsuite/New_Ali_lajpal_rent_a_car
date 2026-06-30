@@ -1,0 +1,78 @@
+.cars-page {
+  padding-top: 100px;
+  background-color: #ffffff;
+}
+
+.cars-page__header {
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.cars-page__header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cars-page__text {
+  text-align: center;
+  flex: 1;
+  z-index: 2;
+}
+
+.cars-page__decor {
+  width: 150px;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+  z-index: 1;
+.cars-page__decor--left {
+  transform: none;
+}
+
+.cars-page__decor--right {
+  transform: scaleX(-1);
+}
+
+.cars-page__decor:hover {
+  transform: scale(1.05);
+}
+
+.cars-page__decor--left:hover {
+  transform: scale(1.05);
+}
+
+.cars-page__decor--right:hover {
+  transform: scaleX(-1) scale(1.05);
+}
+
+.cars-page__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0b132a;
+  margin-bottom: 15px;
+}
+
+.cars-page__subtitle {
+  font-size: 1.1rem;
+  color: #4f5665;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .cars-page {
+    padding-top: 80px;
+  }
+  .cars-page__title {
+    font-size: 2rem;
+  }
+  .cars-page__subtitle {
+    display: none;
+  }
+  .cars-page__decor {
+    display: none; /* Hide decorative cars on small mobile screens */
+  }
+}

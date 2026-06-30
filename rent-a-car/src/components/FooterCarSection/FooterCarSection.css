@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap');
+
+.footer-car-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+  font-family: 'Figtree', sans-serif;
+  overflow: hidden;
+}
+
+.footer-car__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.footer-car__showcase {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-car__giant-text {
+  color: #D42020; /* Brand red color */
+  font-size: 10vw; /* Further reduced font size */
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  line-height: 0.8; /* Very tight line height */
+  white-space: nowrap;
+  margin-bottom: -9vw; /* Moves the text downward behind the car */
+  z-index: 1;
+  position: relative;
+}
+
+.footer-car__image {
+  max-width: 1200px; /* Massive car image */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 40px rgba(0,0,0,0.25));
+  z-index: 2;
+  position: relative;
+}
+
+.footer-car__subheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin-bottom: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.footer-car__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+.btn-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Figtree', sans-serif;
+  text-decoration: none;
+}
+
+.btn-call {
+  background-color: #D42020;
+  color: #ffffff;
+  border-color: #D42020;
+}
+.btn-call:hover {
+  background-color: transparent;
+  color: #D42020;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212, 32, 32, 0.3);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #ffffff;
+  border-color: #25D366;
+}
+.btn-whatsapp:hover {
+  background-color: transparent;
+  color: #25D366;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-book {
+  background-color: #0b132a;
+  color: #ffffff;
+  border-color: #0b132a;
+}
+.btn-book:hover {
+  background-color: transparent;
+  color: #0b132a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(11, 19, 42, 0.3);
+}
+
+/* RESPONSIVE */
+@media (min-width: 1400px) {
+  .footer-car__giant-text {
+    font-size: 9rem; /* Cap the max size */
+    margin-bottom: -120px; /* Shift text downward */
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-car__giant-text {
+    font-size: 13vw; /* Smaller font */
+    margin-bottom: -9vw; /* Increased negative margin to move text slightly downward */
+  }
+  .footer-car__image {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-car-section {
+    padding: 60px 0;
+  }
+  .footer-car__giant-text {
+    font-size: 14vw; /* Smaller font */
+    margin-bottom: -8vw; /* Increased negative margin to move text slightly downward */
+  }
+  .footer-car__image {
+    max-width: 95%;
+  }
+  .footer-car__buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .btn-pill {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}

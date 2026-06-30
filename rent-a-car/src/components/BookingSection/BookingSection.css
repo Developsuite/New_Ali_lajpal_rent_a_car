@@ -1,0 +1,222 @@
+.booking-section {
+  padding: 80px 0;
+  background-color: #fcfcfc;
+}
+
+/* Override the standard container max-width specifically for this section to make it a bit wider */
+.booking-section .container {
+  max-width: 1360px; /* Standard is usually 1280px */
+}
+
+.booking-section__wrapper {
+  background: #ffffff;
+  border-radius: 25px; /* Outer radius */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.11); /* Match WhyChooseUs shadow */
+  padding: 5px; /* The thick white outline effect */
+  width: 100%;
+}
+
+.booking-section__inner {
+  display: flex;
+  align-items: stretch;
+  border-radius: 20px; /* Inner radius */
+  overflow: hidden;
+  height: 100%;
+}
+
+/* LEFT COLUMN - IMAGE */
+.booking-section__image-col {
+  flex: 2.5; /* Massively increased image width */
+  background-color: #D42020;
+  position: relative;
+  min-height: 350px;
+}
+
+.booking-section__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT COLUMN - FORM */
+.booking-section__form-col {
+  flex: 1;
+  padding: 40px; /* Reduced padding to lower height */
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-section__form-card {
+  /* Removed the separate card styling, the wrapper is now the card */
+  width: 100%;
+}
+
+.booking-section__title {
+  font-size: 1.6rem; /* Smaller, minimal title */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.booking-section__subtitle {
+  font-size: 0.85rem; /* Smaller subtitle */
+  color: #a0a5af;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.booking-section__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Tighter gap to reduce height */
+}
+
+.booking-section__form-row {
+  display: flex;
+  gap: 16px; /* Tighter gap */
+}
+
+.booking-section__input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-section__input-group label {
+  font-size: 0.75rem; /* Small, minimal labels */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #9ca3af;
+}
+
+.booking-section__input-group input,
+.booking-section__input-group select {
+  width: 100%;
+  padding: 8px 0; /* Minimal padding */
+  background-color: transparent; /* No background */
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Clean underline */
+  border-radius: 0; /* Not rounded */
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+/* Style select options for dark mode so they don't look broken */
+.booking-section__input-group select option {
+  background-color: #262626; /* Match form background */
+  color: #ffffff;
+  padding: 10px;
+}
+
+.booking-section__input-group input::placeholder,
+.booking-section__input-group select:invalid {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.booking-section__input-group input:focus,
+.booking-section__input-group select:focus {
+  outline: none;
+  border-bottom-color: #D42020; /* Red underline on focus */
+  box-shadow: none; /* Removed the glow box-shadow for minimal look */
+}
+
+/* Custom styling for standard date/select icons - Using white chevron */
+.booking-section__input-group select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0px center; /* Align to edge since padding is 0 */
+  cursor: pointer;
+}
+
+.booking-section__submit-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #D42020;
+  color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 4px; /* Minimal border radius */
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.3s ease;
+}
+
+.booking-section__submit-btn:hover {
+  background-color: transparent;
+  color: #D42020;
+  border-color: #D42020;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .booking-section {
+    padding: 60px 0; /* Slightly less padding on tablet */
+  }
+
+  .booking-section__inner {
+    flex-direction: column;
+  }
+
+  .booking-section__image-col {
+    order: -1;
+    width: 100%;
+    min-height: 300px; /* Kept image the same height */
+  }
+
+  .booking-section__form-col {
+    width: 100%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .booking-section {
+    padding: 40px 0; /* Tight padding for mobile */
+  }
+
+  .booking-section__form-col {
+    padding: 24px 16px; /* Tighter padding inside the card */
+  }
+
+  .booking-section__image-col {
+    min-height: 300px; /* Revert mobile image height */
+  }
+
+  .booking-section__title {
+    font-size: 1.3rem; /* Smaller title */
+    margin-bottom: 4px;
+  }
+
+  .booking-section__subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  .booking-section__form {
+    gap: 12px; /* Tighter gap between rows */
+  }
+
+  .booking-section__form-row {
+    display: flex;
+    flex-direction: row; /* Keep inputs side-by-side (2 columns) */
+    gap: 12px;
+  }
+
+  .booking-section__submit-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+}

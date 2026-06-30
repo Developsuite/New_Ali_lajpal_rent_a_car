@@ -1,0 +1,211 @@
+.why-choose {
+  padding: 50px 20px 100px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.why-choose__header {
+  margin-bottom: 40px;
+}
+
+.why-choose__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: #212121;
+  margin-bottom: 4px;
+}
+
+.why-choose__subtitle {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: #606060;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.11);
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-card__inner {
+  background: #fbfbfb;
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.why-card__text {
+  padding: 30px;
+  text-align: left;
+  flex: 0 0 auto;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+
+.why-card__heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d42020;
+  margin-bottom: 12px;
+}
+
+.why-card__desc {
+  font-size: 1rem;
+  color: #606060;
+  line-height: 1.5;
+}
+
+.why-card__image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+.why-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* Gradients for smooth blending with text container */
+.why-card__gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 2;
+}
+
+.why-card__gradient--bottom {
+  top: 0;
+  background: linear-gradient(to bottom, #fbfbfb 0%, rgba(251, 251, 251, 0) 100%);
+}
+
+.why-card__gradient--top {
+  bottom: 0;
+  background: linear-gradient(to top, #fbfbfb 0%, rgba(251, 251, 251, 0) 100%);
+}
+
+/* Order adjustments for Text Down layout */
+.why-card--text-down .why-card__image-wrapper {
+  order: 1;
+}
+
+.why-card--text-down .why-card__text {
+  order: 2;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .why-choose__grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose {
+    padding: 40px 16px 60px;
+  }
+
+  .why-choose__header {
+    margin-bottom: 30px;
+  }
+
+  .why-choose__carousel-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Blur fade effect on left and right for mobile carousel */
+  .why-choose__carousel-wrapper::before,
+  .why-choose__carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 20px;
+    width: 30px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .why-choose__carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0) 100%);
+  }
+
+  .why-choose__carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0) 100%);
+  }
+
+  .why-choose__title {
+    font-size: 1.3rem;
+  }
+
+  .why-choose__subtitle {
+    font-size: 0.85rem;
+  }
+
+  .why-choose__grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .why-choose__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .why-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    max-width: 320px;
+  }
+
+  /* Make all cards consistent on mobile: Image Top, Text Bottom */
+  .why-card__image-wrapper {
+    order: 1 !important;
+    min-height: 220px;
+  }
+
+  .why-card__text {
+    order: 2 !important;
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  /* Adjust gradients for consistent Image Top layout */
+  .why-card__gradient {
+    top: auto !important;
+    bottom: 0 !important;
+    background: linear-gradient(to top, #fbfbfb 0%, rgba(251, 251, 251, 0) 100%) !important;
+  }
+}

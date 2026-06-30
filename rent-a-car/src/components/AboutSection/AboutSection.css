@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
+
+.about-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: 'Figtree', sans-serif; /* Small Figtree font */
+}
+
+.about-section__wrapper {
+  display: flex;
+  align-items: stretch; /* Stretch both columns to match heights */
+  gap: 60px;
+}
+
+/* LEFT COLUMN: IMAGE & BADGE */
+.about-section__image-col {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-section__image-container {
+  position: relative;
+  width: 100%;
+  max-width: 550px; /* Increased car image size */
+}
+
+.about-section__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px; /* Extremely rounded corners at every side */
+  display: block;
+}
+
+/* The white cutout wrapper */
+.about-section__badge-wrapper {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background-color: #ffffff;
+  padding: 14px;
+  border-radius: 35px; /* Softer rounded overlap */
+  z-index: 2;
+}
+
+.about-section__badge {
+  background-color: #D42020; /* Brand red color theme */
+  padding: 24px 32px;
+  border-radius: 24px; /* More rounded badge */
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(212, 32, 32, 0.2);
+}
+
+.about-section__badge-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.about-section__badge-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* RIGHT COLUMN: CONTENT */
+.about-section__content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spreads the two groups to match image height */
+  padding: 15px 0;
+}
+
+.about-section__overline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #D42020;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.about-section__title {
+  font-size: 2.6rem; 
+  font-weight: 800;
+  color: #0b132a;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+/* Highlight text for 'Rental' */
+.highlight-text {
+  color: #D42020; /* Red theme */
+  display: inline-block;
+}
+
+.about-section__desc {
+  font-size: 0.95rem; /* Smaller font */
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 35px;
+  max-width: 95%;
+}
+
+/* FEATURES GRID */
+.about-section__features-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack features vertically */
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-feature__icon {
+  width: 44px;
+  height: 44px;
+  background-color: #fff0f0; /* Soft red background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-feature__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #D42020; /* Red theme */
+}
+
+.about-feature__content h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0b132a;
+  margin-bottom: 4px;
+}
+
+.about-feature__content p {
+  font-size: 0.8rem;
+  color: #666666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ACTIONS / BUTTONS */
+.about-section__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-whatsapp {
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #25D366; /* WhatsApp Green */
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Figtree', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-call {
+  padding: 12px 28px;
+  border-radius: 30px;
+  background-color: #D42020; /* Brand Red */
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Figtree', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-call:hover {
+  background-color: #b31b1b; /* Darker red on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 32, 32, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .about-section__wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .about-section__image-col {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .about-section__image-container {
+    max-width: 400px;
+  }
+
+  .about-section__badge-wrapper {
+    top: -15px;
+    left: -15px;
+    padding: 10px;
+  }
+
+  .about-section__badge {
+    padding: 18px 24px;
+  }
+
+  .about-section__badge-number {
+    font-size: 2rem;
+  }
+
+  /* Center alignment for mobile */
+  .about-section__content-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-section__content-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-section__desc {
+    text-align: center;
+  }
+
+  .about-section__features-grid {
+    display: flex;
+    flex-direction: row; /* Make contact and location horizontal */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .about-feature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+  }
+
+  .about-section__actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-section__title {
+    font-size: 1.8rem; /* Smaller font for mobile */
+  }
+  
+  .about-section__desc {
+    font-size: 0.85rem; /* Smaller font for mobile */
+  }
+  
+  .about-feature__content h4 {
+    font-size: 0.85rem;
+  }
+  
+  .about-feature__content p {
+    font-size: 0.75rem;
+  }
+  
+  .about-section__features-grid {
+    gap: 15px;
+  }
+  
+  .btn-whatsapp, .btn-call {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
+}

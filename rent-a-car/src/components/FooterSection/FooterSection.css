@@ -1,0 +1,248 @@
+.main-footer {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 40px 0; /* Reduced to make the footer height smaller */
+  font-family: 'Figtree', sans-serif;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,0,0,0.05); /* Subtle border from Figma */
+}
+
+/* Optional faint background image layer */
+.main-footer__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10h10v10H10z' fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 500px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ensure columns align cleanly at the top */
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* COLUMN 1: About & Subscribe */
+.main-footer__col--about {
+  flex: 2;
+  max-width: 420px; /* Increased to give text more breathing room */
+}
+
+.main-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.footer-logo-img {
+  height: 70px; /* Increased size */
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #050B20;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.main-footer__desc {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.main-footer__form {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 15px 35px rgba(132, 132, 132, 0.1);
+  border: 1px solid #f1f1f1;
+  overflow: hidden;
+}
+
+.main-footer__form input {
+  flex: 1;
+  border: none;
+  padding: 0 20px;
+  font-size: 0.9rem;
+  font-family: 'Figtree', sans-serif;
+  color: #333;
+  outline: none;
+}
+
+.main-footer__form input::placeholder {
+  color: #999;
+}
+
+.main-footer__subscribe-btn {
+  background-color: #D42020; /* Brand Red */
+  color: #ffffff;
+  border: none;
+  padding: 0 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-footer__subscribe-btn:hover {
+  background-color: #b31b1b;
+}
+
+/* COLUMN 2: Useful Links */
+.main-footer__col--links {
+  flex: 1;
+  padding-top: 15px; /* Slight padding to visually align with the center of the large logo */
+}
+
+.main-footer__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #050B20;
+  margin-bottom: 25px;
+}
+
+.main-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-footer__list a {
+  color: #555555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.main-footer__list a:hover {
+  color: #D42020;
+}
+
+/* COLUMN 3: Contact Info */
+.main-footer__col--contact {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap between items */
+  padding-top: 15px; /* Slight padding to visually align with the center of the large logo */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Reduced gap between icon and text */
+}
+
+.contact-icon {
+  width: 34px; /* Smaller icon */
+  height: 34px; /* Smaller icon */
+  background-color: #D42020;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* Tighter gap */
+}
+
+.contact-text strong {
+  font-size: 0.9rem; /* Smaller title */
+  color: #050B20;
+}
+
+.contact-text a, .contact-text span {
+  font-size: 0.8rem; /* Smaller subtitle */
+  color: #555555;
+  text-decoration: none;
+}
+
+.contact-text a:hover {
+  color: #D42020;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .main-footer__wrapper {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .main-footer__col--about {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .main-footer__logo {
+    justify-content: center;
+  }
+  .main-footer__form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .main-footer__col--contact {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 40px 0;
+  }
+  .main-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Structure Links and Contact as two columns */
+  .main-footer__col--links,
+  .main-footer__col--contact {
+    flex: 1;
+    min-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .main-footer__list {
+    align-items: center;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
