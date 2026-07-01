@@ -2,7 +2,7 @@
 
 .car-details-page {
   padding: 120px 20px 80px;
-  background-color: #f4f6f8;
+  background-color: #ffffff; /* Pure white page background */
   min-height: 100vh;
   font-family: 'Figtree', sans-serif;
 }
@@ -17,21 +17,19 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #D42020;
+  color: #111;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 30px;
+  font-size: 0.85rem;
+  margin-bottom: 40px;
   padding: 8px 16px;
-  background: white;
+  background: #f8f9fa;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
 
 .car-details__back:hover {
-  background: #D42020;
-  color: white;
+  background: #eee;
   transform: translateX(-4px);
 }
 
@@ -42,35 +40,31 @@
 /* ===== MAIN CONTENT GRID ===== */
 .car-details__content {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: start;
 }
 
 /* ===== LEFT SIDE: IMAGE COLUMN ===== */
 .car-details__image-wrapper {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 40px;
+  /* No card background, no borders, no shadows */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
   position: sticky;
-  top: 100px;
-  border: 1px solid rgba(212, 32, 32, 0.1);
+  top: 120px;
+  padding: 20px 0;
 }
 
 .car-details__image {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   object-fit: contain;
   transition: transform 0.5s ease;
-  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
 }
 
 .car-details__image-wrapper:hover .car-details__image {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* ===== RIGHT SIDE: DETAILS COLUMN ===== */
@@ -81,83 +75,81 @@
 
 .car-details__badge {
   align-self: flex-start;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: #ffffff;
   background: #D42020;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 50px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(212, 32, 32, 0.3);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
 }
 
 .car-details__title {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 800;
-  color: #1a1a1a;
-  margin-bottom: 5px;
+  color: #111;
+  margin-bottom: 8px;
   line-height: 1.1;
   letter-spacing: -0.5px;
 }
 
 .car-details__price {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #D42020;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: flex;
   align-items: baseline;
   gap: 6px;
 }
 
 .car-details__price span {
-  font-size: 1rem;
-  color: #777;
+  font-size: 0.9rem;
+  color: #888;
   font-weight: 500;
 }
 
 .car-details__description {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: #555;
-  line-height: 1.7;
-  margin-bottom: 35px;
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
-  border-left: 4px solid #D42020;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  /* Removed the box and the one-sided border */
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
 }
 
-/* ===== BEAUTIFUL OUTLINED CARDS (SPECS) ===== */
+/* ===== MINIMAL OUTLINED CARDS (SPECS) ===== */
 .car-details__specs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 12px;
+  margin-bottom: 50px;
 }
 
 .spec-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   background: #ffffff;
-  padding: 20px;
-  border-radius: 16px;
-  border: 1.5px solid rgba(212, 32, 32, 0.15);
+  padding: 16px;
+  border-radius: 8px;
+  /* Thin, minimal gray outline */
+  border: 1px solid #eaeaea; 
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 
 .spec-item:hover {
-  border-color: #D42020;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(212, 32, 32, 0.1);
+  border-color: #ccc;
+  background: #fcfcfc;
 }
 
 .spec-item__label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #888;
   font-weight: 600;
   text-transform: uppercase;
@@ -165,8 +157,8 @@
 }
 
 .spec-item__value {
-  font-size: 1rem;
-  color: #222;
+  font-size: 0.85rem;
+  color: #111;
   font-weight: 700;
 }
 
@@ -176,74 +168,68 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background-color: #D42020;
+  background-color: #25D366; /* WhatsApp Green */
   color: #ffffff;
-  padding: 20px 40px;
-  font-size: 1.1rem;
+  padding: 18px 40px;
+  font-size: 1rem;
   font-weight: 700;
-  border-radius: 16px;
+  border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(212, 32, 32, 0.3);
   width: 100%;
 }
 
 .car-details__book-btn:hover {
-  background-color: #b31b1b;
-  transform: translateY(-3px);
-  box-shadow: 0 15px 35px rgba(212, 32, 32, 0.4);
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
 }
 
 .car-details__book-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 /* ===== MINIMAL DISCLAIMER ===== */
 .car-details__disclaimer {
-  margin-top: 60px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 30px;
-  border: 1px dashed rgba(212, 32, 32, 0.3);
-  text-align: center;
+  margin-top: 80px;
+  border-top: 1px solid #eaeaea;
+  padding-top: 40px;
+  text-align: left;
 }
 
 .car-details__disclaimer-title {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #222;
+  color: #888;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
-  color: #D42020;
 }
 
 .car-details__disclaimer p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  margin: 0 auto;
+  color: #777;
+  line-height: 1.8;
+  font-size: 0.85rem;
   max-width: 800px;
 }
 
 .car-details__disclaimer strong {
-  color: #1a1a1a;
+  color: #111;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
   .car-details__content {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   
   .car-details__image-wrapper {
     position: static;
-    padding: 30px;
   }
   
   .car-details__title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -257,6 +243,6 @@
   }
   
   .car-details__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
