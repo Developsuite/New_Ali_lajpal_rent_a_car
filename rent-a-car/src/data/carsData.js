@@ -129,7 +129,7 @@ export const carsData = [
     price: 13000,
     seats: 7,
     featured: true,
-    image: '/imagess/remaining/prado.png', // Temporary placeholder until image uploaded
+    image: '/imagess/remaining/fortuner.png',
   },
   {
     id: 12,
