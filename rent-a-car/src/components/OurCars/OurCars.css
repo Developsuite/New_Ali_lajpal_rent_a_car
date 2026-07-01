@@ -1,8 +1,9 @@
-/* ===== OUR CARS SECTION ===== */
 .our-cars {
   padding: 20px 20px 40px;
   background-color: #ffffff;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .our-cars__header {
@@ -251,23 +252,30 @@
 /* ===== SIDEBAR FILTER LAYOUT ===== */
 .our-cars__layout {
   display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .our-cars__layout--with-sidebar {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .our-cars__sidebar {
   flex: 0 0 280px;
   position: sticky;
-  top: 100px; /* Adjust based on navbar height */
+  top: 100px;
+  box-sizing: border-box;
 }
 
 .our-cars__main-content {
   flex: 1;
-  min-width: 0; /* Prevents flex blowout */
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .our-cars__sidebar-title {
