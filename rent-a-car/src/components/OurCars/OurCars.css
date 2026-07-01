@@ -179,14 +179,15 @@
 /* ===== BOTTOM ROW ===== */
 .car-card__bottom {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .car-card__info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .car-card__info-item {
@@ -214,18 +215,51 @@
   color: #ffffff;
 }
 
+/* ===== ACTION BUTTONS ===== */
+.car-card__action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.car-card__details-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(150, 153, 156, 0.1);
+  color: #333;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.car-card:hover .car-card__details-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.car-card__details-btn:hover {
+  background: #333 !important;
+  color: #fff !important;
+}
+
 /* ===== BOOK NOW BUTTON (WhatsApp Green) ===== */
 .car-card__book-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   background: #25D366;
   color: #ffffff;
   font-size: 0.78rem;
   font-weight: 600;
-  padding: 7px 16px;
+  padding: 8px 16px;
   border-radius: 8px;
-  border: none;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
