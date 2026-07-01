@@ -31,15 +31,15 @@ function HomePage() {
       "longitude": 74.3587
     },
     "priceRange": "$$",
-    "description": "Ali Lajpal Rent A Car provides premium rent a car services in Bahria Town, Teen Talwar, and Lahore. Choose from New Ali Lajpal's SUVs, Sedans, and Luxury vehicles."
+    "description": "Looking for Ali Lajpal? Discover New Ali Lajpal Rent A Car. We provide premium rent a car services in Bahria Town, Teen Talwar, and Lahore. Best cars rent."
   };
 
   return (
     <main>
       <SEO 
-        title="New Ali Lajpal - Best Rent A Car in Bahria Town & Teen Talwar"
-        description="Looking for the best rent a car? Ali Lajpal Rent A Car offers premium, reliable services in Bahria Town, Teen Talwar, and Lahore. Book with New Ali Lajpal today!"
-        keywords="Ali Lajpal, rent a car, Bahria Town, Teen Talwar, rent a car, New Ali Lajpal, rent a car Lahore, luxury car rental"
+        title="New Ali Lajpal Rent A Car - Best in Bahria Town & Lahore"
+        description="Searching for Ali Lajpal? Choose New Ali Lajpal Rent A Car for the most reliable rent a car services in Bahria Town and Teen Talwar. The best cars rent in Lahore!"
+        keywords="New Ali Lajpal, Ali Lajpal, Lajpal, rent a car, Bahria Town, cars rent, Teen Talwar, rent a car, New Ali Lajpal rent a car, rent a car Lahore, luxury car rental"
         schemaData={homeSchema}
       />
       <Hero />
