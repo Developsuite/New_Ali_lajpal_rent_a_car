@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './BookingSection.css';
+import { carsData } from '../../data/carsData';
 
 function BookingSection() {
   const [formData, setFormData] = useState({
@@ -116,10 +117,11 @@ Pickup Point: ${pickup || 'N/A'}`;
                       required
                     >
                       <option value="" disabled>Select...</option>
-                      <option value="Toyota Corolla">Toyota Corolla</option>
-                      <option value="Honda Civic">Honda Civic</option>
-                      <option value="Toyota Prado">Toyota Prado</option>
-                      <option value="Toyota Fortuner">Toyota Fortuner</option>
+                      {carsData.map((carItem) => (
+                        <option key={carItem.id} value={`${carItem.make} ${carItem.name}`}>
+                          {carItem.make} {carItem.name}
+                        </option>
+                      ))}
                       <option value="Other">Other (Please discuss)</option>
                     </select>
                   </div>
