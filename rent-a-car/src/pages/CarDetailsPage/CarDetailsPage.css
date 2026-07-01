@@ -162,14 +162,20 @@
   font-weight: 700;
 }
 
-/* ===== PREMIUM BOOK BUTTON (WITH SHAKE ANIMATION) ===== */
-@keyframes insist-wiggle {
-  0%, 7% { transform: rotateZ(0); }
-  15% { transform: rotateZ(-3deg) scale(1.02); }
-  20% { transform: rotateZ(2deg) scale(1.02); }
-  25% { transform: rotateZ(-2deg) scale(1.02); }
-  30% { transform: rotateZ(1deg) scale(1.02); }
-  35%, 100% { transform: rotateZ(0) scale(1); }
+/* ===== PREMIUM BOOK BUTTON (WITH PULSE ANIMATION) ===== */
+@keyframes insist-pulse {
+  0% { 
+    transform: scale(1); 
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); 
+  }
+  50% { 
+    transform: scale(1.03); 
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); 
+  }
+  100% { 
+    transform: scale(1); 
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); 
+  }
 }
 
 .car-details__book-btn {
@@ -186,14 +192,13 @@
   text-decoration: none;
   transition: all 0.3s ease;
   width: 100%;
-  animation: insist-wiggle 3s infinite ease-in-out;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  animation: insist-pulse 2s infinite ease-in-out;
 }
 
 .car-details__book-btn:hover {
   background-color: #1ebe5d;
   animation: none;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
