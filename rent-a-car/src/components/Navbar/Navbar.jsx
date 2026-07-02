@@ -8,6 +8,11 @@ const navLinks = [
   { id: 'why-choose', label: 'Why Choose Us' },
   { id: 'our-reviews', label: 'Reviews' },
   { id: 'contact-us', label: 'Contact Us' },
+  { id: 'about', label: 'About Us' },
+  { id: 'driver', label: 'Driver' },
+  { id: 'pricing', label: 'Pricing' },
+  { id: 'compare', label: 'Compare' },
+  { id: 'shop', label: 'Shop' },
 ];
 
 function Navbar() {
