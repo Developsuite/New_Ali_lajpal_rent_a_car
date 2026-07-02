@@ -27,11 +27,12 @@ const FooterSection = () => {
           <div className="main-footer__col main-footer__col--links">
             <h3 className="main-footer__title">Useful Links</h3>
             <ul className="main-footer__list">
-              <li><a href="/#about">About Us</a></li>
-              <li><a href="/#driver">Driver</a></li>
-              <li><a href="/#pricing">Pricing</a></li>
-              <li><a href="/#compare">Compare</a></li>
-              <li><a href="/#shop">Shop</a></li>
+              <li><a href="/#home">Home</a></li>
+              <li><a href="/cars">Our Cars</a></li>
+              <li><a href="/#our-services">Services</a></li>
+              <li><a href="/#why-choose">Why Choose Us</a></li>
+              <li><a href="/#our-reviews">Reviews</a></li>
+              <li><a href="/#contact-us">Contact Us</a></li>
             </ul>
           </div>
 
