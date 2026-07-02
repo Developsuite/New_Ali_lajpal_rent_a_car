@@ -28,6 +28,7 @@
   opacity: 0.8;
   transition: transform 0.3s ease;
   z-index: 1;
+}
 .cars-page__decor--left {
   transform: none;
 }
