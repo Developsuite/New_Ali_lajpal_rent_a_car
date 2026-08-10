@@ -33,7 +33,7 @@ function CarsPage() {
 
   return (
     <main className="cars-page">
-      <SEO 
+      <SEO
         title="Our Fleet - New Ali Lajpal Rent A Car"
         description="Browse the full fleet of New Ali Lajpal Rent A Car. We offer the best rent a car and cars rent options in Bahria Town, Teen Talwar, and Lahore. Searching for Ali Lajpal? Choose New Ali Lajpal!"
         keywords="New Ali Lajpal, Ali Lajpal, Lajpal, rent a car, Bahria Town, cars rent, Teen Talwar, rent a car, New Ali Lajpal rent a car, full fleet rent a car, SUV rent a car"
@@ -42,21 +42,21 @@ function CarsPage() {
       />
       <div className="cars-page__header container">
         <div className="cars-page__header-content">
-          <img 
-            src="/imagess/ourcars/KiaSportage.png" 
-            alt="Decoration Car Left" 
-            className="cars-page__decor cars-page__decor--left" 
-            loading="lazy" 
+          <img
+            src="/imagess/ourcars/kia-sportage-best-car-rental-lahore.webp"
+            alt="Decoration Car Left"
+            className="cars-page__decor cars-page__decor--left"
+            loading="lazy"
           />
           <div className="cars-page__text">
             <h1 className="cars-page__title">Our Complete <span className="text-gradient">Fleet</span></h1>
             <p className="cars-page__subtitle">Browse our full selection of premium vehicles available for rent in Lahore.</p>
           </div>
-          <img 
-            src="/imagess/remaining/civic.png" 
-            alt="Decoration Car Right" 
-            className="cars-page__decor cars-page__decor--right" 
-            loading="lazy" 
+          <img
+            src="/imagess/remaining/honda-civic-car-rental-bahria-town-lahore.webp"
+            alt="Decoration Car Right"
+            className="cars-page__decor cars-page__decor--right"
+            loading="lazy"
           />
         </div>
       </div>

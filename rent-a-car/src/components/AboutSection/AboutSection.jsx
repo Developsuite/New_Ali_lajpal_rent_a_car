@@ -53,7 +53,7 @@ const AboutSection = () => {
                 </div>
                 <div className="about-feature__content">
                   <h4>Contact Us</h4>
-                  <p>+92 300 1234567 <br/> info@alilajpal.com</p>
+                  <p>+92 305 7649991 <br/> saqibraza8154@gmail.com</p>
                 </div>
               </div>
 

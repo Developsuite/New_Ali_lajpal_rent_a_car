@@ -9,7 +9,7 @@ const servicesData = [
     description: (
       <>Travel between cities hassle-free with <strong style={{ color: '#D42020' }}>New Ali Lajpal</strong>. One-way fare only no hidden return charges, just smooth rides to your destination.</>
     ),
-    image: '/imagess/services/city_drop.png',
+    image: '/imagess/services/car-rent-for-city-drop-in-lahore.webp',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" fill="currentColor" />
@@ -22,7 +22,7 @@ const servicesData = [
     tagline: 'Never Miss a Flight.',
     description:
       'Our professional drivers ensure timely airport transfers with comfort and reliability, every single time.',
-    image: '/imagess/services/airport_travels.png',
+    image: '/imagess/services/car-rent-for-airport-travels-lahore.webp',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" fill="currentColor" />
@@ -35,7 +35,7 @@ const servicesData = [
     tagline: 'Professional. Punctual. Premium.',
     description:
       'Impress clients and stay on schedule with our punctual, professional transport for meetings, conferences, and official tours.',
-    image: '/imagess/services/corporate_travels.png',
+    image: '/imagess/services/corporate-travels-rental-bahria-town.webp',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" fill="currentColor" />
@@ -48,7 +48,7 @@ const servicesData = [
     tagline: 'Explore. Discover. Enjoy.',
     description:
       'From heritage sites to scenic routes explore the best spots in town with a dedicated ride in total comfort.',
-    image: '/imagess/services/city_tours.png',
+    image: '/imagess/services/city-tours-in-lahore-for-rent.webp',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" fill="currentColor" />
@@ -61,7 +61,7 @@ const servicesData = [
     tagline: 'Arrive in Style.',
     description:
       'Make your special day even more memorable. Choose from our elegant fleet for weddings, celebrations, and premium occasions.',
-    image: '/imagess/services/weddng_travels.png',
+    image: '/imagess/services/wedding-travels-rent-a-car-service.webp',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" />
@@ -74,7 +74,7 @@ const servicesData = [
     tagline: 'Safe Rides for Your Loved Ones.',
     description:
       'Spacious, clean, and comfortable vehicles perfect for family trips, every journey with your loved ones is safe and enjoyable.',
-    image: '/imagess/services/FAMILY_travels.png',
+    image: '/imagess/services/car-rental-for-family-travels-bahria-town.webp',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor" />
@@ -111,9 +111,8 @@ function OurServices() {
                     key={service.id}
                     src={service.image}
                     alt={service.title}
-                    className={`our-services__showcase-img ${
-                      index === activeIndex ? 'our-services__showcase-img--active' : ''
-                    }`}
+                    className={`our-services__showcase-img ${index === activeIndex ? 'our-services__showcase-img--active' : ''
+                      }`}
                   />
                 ))}
               </div>
@@ -122,9 +121,8 @@ function OurServices() {
               {servicesData.map((service, index) => (
                 <div
                   key={service.id}
-                  className={`our-services__showcase-content ${
-                    index === activeIndex ? 'our-services__showcase-content--active' : ''
-                  }`}
+                  className={`our-services__showcase-content ${index === activeIndex ? 'our-services__showcase-content--active' : ''
+                    }`}
                 >
                   <span className="our-services__showcase-tagline">
                     {service.tagline}
@@ -144,9 +142,8 @@ function OurServices() {
           <div className="our-services__list">
             {servicesData.map((service, index) => (
               <button
-                className={`our-services__item ${
-                  index === activeIndex ? 'our-services__item--active' : ''
-                }`}
+                className={`our-services__item ${index === activeIndex ? 'our-services__item--active' : ''
+                  }`}
                 key={service.id}
                 onClick={() => setActiveIndex(index)}
                 onMouseEnter={() => setActiveIndex(index)}
