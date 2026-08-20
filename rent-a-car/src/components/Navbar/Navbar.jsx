@@ -6,6 +6,7 @@ const navLinks = [
   { id: 'our-cars', label: 'Our Cars' },
   { id: 'our-services', label: 'Services' },
   { id: 'why-choose', label: 'Why Choose Us' },
+  { id: 'blog', label: 'Blog' },
   { id: 'our-reviews', label: 'Reviews' },
   { id: 'contact-us', label: 'Contact Us' },
 ];
@@ -38,11 +39,17 @@ function Navbar() {
     setIsMobileMenuOpen(false);
   };
 
+  const getHref = (id) => {
+    if (id === 'our-cars') return '/cars-fleet-for-rent';
+    if (id === 'blog') return '/blog';
+    return `/#${id}`;
+  };
+
   return (
     <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`} id="navbar">
       <div className="container navbar__container">
         {/* Logo */}
-        <a href="/#home" className="navbar__logo" onClick={() => handleNavClick('home')}>
+        <a href="/#best-car-rental-service-lahore" className="navbar__logo" onClick={() => handleNavClick('home')}>
           <img
             src="/imagess/Logo/2.png"
             alt="New Ali Lajpal Rent A Car"
@@ -56,7 +63,7 @@ function Navbar() {
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  href={link.id === 'our-cars' ? '/cars' : `/#${link.id}`}
+                  href={getHref(link.id)}
                   className={`navbar__link ${activeLink === link.id ? 'navbar__link--active' : ''}`}
                   onClick={() => handleNavClick(link.id)}
                 >
@@ -98,7 +105,7 @@ function Navbar() {
             {navLinks.map((link, index) => (
               <li key={link.id} style={{ animationDelay: `${index * 0.06}s` }}>
                 <a
-                  href={link.id === 'our-cars' ? '/cars' : `/#${link.id}`}
+                  href={getHref(link.id)}
                   className={`navbar__mobile-link ${activeLink === link.id ? 'navbar__mobile-link--active' : ''}`}
                   onClick={() => handleNavClick(link.id)}
                 >
@@ -115,7 +122,7 @@ function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
             </svg>
             WhatsApp Now
           </a>

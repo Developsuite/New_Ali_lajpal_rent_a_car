@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.newalilajpal.com/sitemap.xml
+Sitemap: https://newalilajpal.com/sitemap.xml

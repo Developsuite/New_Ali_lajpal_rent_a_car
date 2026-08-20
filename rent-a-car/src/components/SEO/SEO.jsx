@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ 
-  title, 
-  description, 
-  keywords, 
-  url = "https://www.newalilajpal.com", 
-  image = "https://www.newalilajpal.com/imagess/Logo/2.png", 
-  type = "website", 
-  schemaData = null 
+const SEO = ({
+  title,
+  description,
+  keywords,
+  url = "https://newalilajpal.com",
+  image = "https://newalilajpal.com/imagess/Logo/2.png",
+  type = "website",
+  schemaData = null
 }) => {
   return (
     <Helmet>

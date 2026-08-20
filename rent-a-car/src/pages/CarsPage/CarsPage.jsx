@@ -36,9 +36,9 @@ function CarsPage() {
       <SEO
         title="Our Fleet - New Ali Lajpal Rent A Car"
         description="Browse the full fleet of New Ali Lajpal Rent A Car. We offer the best rent a car and cars rent options in Bahria Town, Teen Talwar, and Lahore. Searching for Ali Lajpal? Choose New Ali Lajpal!"
-        keywords="New Ali Lajpal, Ali Lajpal, Lajpal, rent a car, Bahria Town, cars rent, Teen Talwar, rent a car, New Ali Lajpal rent a car, full fleet rent a car, SUV rent a car"
+        keywords="New Ali Lajpal, Ali Lajpal Rent a car, Lajpal car rental service, best car rent behria town, Bahria Town Lahore car rental , cars rental company lahore, luxury car rental service"
         schemaData={carsSchema}
-        url="https://www.newalilajpal.com/cars"
+        url="https://newalilajpal.com/cars-fleet-for-rent"
       />
       <div className="cars-page__header container">
         <div className="cars-page__header-content">

@@ -28,7 +28,7 @@ export const carsData = [
     price: 3000,
     seats: 4,
     featured: false,
-    image: '/imagess/ourcars/kia-sportage-best-car-rental-lahore.webp',
+    image: '/imagess/ourcars/suzuki-wagonr-rent-car-lahore.webp',
     description: 'Suzuki Wagon R is a spacious and fuel-efficient hatchback, perfect for city travel and family use. It offers good headroom, comfortable seating, and reliable performance, making it a popular choice for rent-a-car customers in Pakistan.',
     engine: '1000cc',
     ac: 'Yes, fully air-conditioned',

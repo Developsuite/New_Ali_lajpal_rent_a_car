@@ -15,9 +15,9 @@ function HomePage() {
     "@context": "https://schema.org",
     "@type": "AutoRental",
     "name": "New Ali Lajpal Rent A Car",
-    "image": "https://www.newalilajpal.com/imagess/Logo/2.png",
-    "@id": "https://www.newalilajpal.com",
-    "url": "https://www.newalilajpal.com",
+    "image": "https://newalilajpal.com/imagess/Logo/2.png",
+    "@id": "https://newalilajpal.com",
+    "url": "https://newalilajpal.com",
     "telephone": "+923057649991",
     "address": {
       "@type": "PostalAddress",
@@ -36,10 +36,11 @@ function HomePage() {
 
   return (
     <main>
-      <SEO 
+      <SEO
         title="New Ali Lajpal Rent A Car - Best in Bahria Town & Lahore"
         description="Searching for Ali Lajpal? Choose New Ali Lajpal Rent A Car for the most reliable rent a car services in Bahria Town and Teen Talwar. The best cars rent in Lahore!"
-        keywords="New Ali Lajpal, Ali Lajpal, Lajpal, rent a car, Bahria Town, cars rent, Teen Talwar, rent a car, New Ali Lajpal rent a car, rent a car Lahore, luxury car rental"
+        keywords="New Ali Lajpal, Ali Lajpal Rent a car, Lajpal car rental service, best car rent behria town, Bahria Town Lahore car rental , cars rental company lahore, luxury car rental service"
+        url="https://newalilajpal.com/"
         schemaData={homeSchema}
       />
       <Hero />
