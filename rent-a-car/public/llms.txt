@@ -1,0 +1,31 @@
+# New Ali Lajpal Rent A Car
+
+> New Ali Lajpal Rent A Car provides car rental services in Bahria Town and Lahore, Pakistan.
+
+This website provides information about car rental options, fleet details, rental services, pricing, customer reviews, and contact information for New Ali Lajpal Rent A Car.
+
+## Core Pages
+
+- [Homepage](https://newalilajpal.com/): Overview of car rental services, available fleet highlights, service areas in Bahria Town and Lahore, customer reviews, and booking information.
+- [Cars Fleet](https://newalilajpal.com/cars-fleet-for-rent): Complete listing of rental vehicles including economy hatchbacks, executive sedans, luxury SUVs, and passenger vans.
+- [Car Rental Services](https://newalilajpal.com/#our-services): Details on chauffeured driver options, self-drive rentals, airport transfers, and long-term monthly rentals.
+- [Why Choose Us](https://newalilajpal.com/#why-choose): Information about vehicle maintenance standards, pricing transparency, and customer support.
+- [Customer Reviews](https://newalilajpal.com/#our-reviews): Testimonials and feedback from customers who have rented vehicles.
+- [Contact Us](https://newalilajpal.com/#contact-us): Phone numbers, location details, and direct contact options for vehicle inquiries and bookings.
+
+## Guides & Information
+
+- [Car Rental Guide](https://newalilajpal.com/blog): Comprehensive guide covering car rental options, fleet selection, airport transfers, chauffeured drivers, and FAQs for renting a car in Bahria Town Lahore.
+
+## Vehicle Fleet Details
+
+- [Suzuki Alto AGS](https://newalilajpal.com/car/1): Specifications and rental details for the 660cc automatic economy hatchback.
+- [Suzuki Wagon R](https://newalilajpal.com/car/2): Specifications and rental details for the 1000cc economy hatchback.
+- [Toyota Corolla](https://newalilajpal.com/car/3): Specifications and rental details for the 1.3L sedan.
+- [Toyota Yaris](https://newalilajpal.com/car/4): Specifications and rental details for the 1.3L/1.5L sedan.
+- [Toyota Grande](https://newalilajpal.com/car/5): Specifications and rental details for the 1.8L executive sedan.
+- [KIA Sportage](https://newalilajpal.com/car/6): Specifications and rental details for the 2.0L crossover SUV.
+- [Toyota Fortuner](https://newalilajpal.com/car/11): Specifications and rental details for the 7-seater SUV.
+- [Toyota Prado](https://newalilajpal.com/car/12): Specifications and rental details for the luxury SUV.
+- [Toyota Land Cruiser V8](https://newalilajpal.com/car/13): Specifications and rental details for the premium luxury SUV.
+- [Toyota Hiace Grand Cabin](https://newalilajpal.com/car/19): Specifications and rental details for the 13-seater passenger van.
