@@ -1,0 +1,6 @@
+Changes Made for SEO and AEO Optimization
+1. descriptions of all the car pages should be less than 150 words each 
+2. Meta Titles and descriptions of all the car pages should be less than 60 and 160 characters respectively
+3. Canonical url from www to non-www 
+4. All images format png to webp
+5. Blog Page Setup with Internal links 
