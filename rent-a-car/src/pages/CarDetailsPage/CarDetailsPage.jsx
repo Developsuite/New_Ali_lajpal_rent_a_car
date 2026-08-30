@@ -32,6 +32,7 @@ function CarDetailsPage() {
     "@type": "Product",
     "name": `${car.make} ${car.name}`,
     "image": `https://newalilajpal.com${car.image}`,
+    "url": `https://newalilajpal.com/car/${car.id}`,
     "description": car.description || `Rent ${car.make} ${car.name} in Lahore.`,
     "offers": {
       "@type": "Offer",
@@ -47,6 +48,7 @@ function CarDetailsPage() {
         title={`${car.make} ${car.name} Rent A Car - New Ali Lajpal`}
         description={car.description || `Book ${car.make} ${car.name} with New Ali Lajpal Rent A Car. Best rent a car in Bahria Town, Teen Talwar.`}
         keywords={`${car.make} ${car.name} rent, ${car.name} rent a car, rent a car Lahore, New Ali Lajpal, Ali Lajpal rent a car`}
+        url={`https://newalilajpal.com/car/${car.id}`}
         schemaData={carSchema}
       />
 

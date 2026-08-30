@@ -1,1 +1,7 @@
+# Host-level 301 redirects to canonical HTTPS non-www domain
+http://www.newalilajpal.com/* https://newalilajpal.com/:splat 301!
+https://www.newalilajpal.com/* https://newalilajpal.com/:splat 301!
+http://newalilajpal.com/* https://newalilajpal.com/:splat 301!
+
+# SPA Routing Fallback
 /* /index.html 200
