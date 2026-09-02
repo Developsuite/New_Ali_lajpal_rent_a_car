@@ -1,8 +1,58 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import SEO from '../../components/SEO/SEO';
-import { carsData } from '../../data/carsData';
+import { carsData, getCarDisplayName } from '../../data/carsData';
 import './CarDetailsPage.css';
+
+const carTitles = {
+  1: "Suzuki Alto AGS Rent A Car in Lahore | New Ali Lajpal",
+  2: "Suzuki Wagon R Rent A Car in Lahore | New Ali Lajpal",
+  3: "Toyota Corolla Rent A Car in Lahore | New Ali Lajpal",
+  4: "Toyota Yaris Rent A Car in Lahore | New Ali Lajpal",
+  5: "Toyota Grande Rent A Car in Lahore | New Ali Lajpal",
+  6: "KIA Sportage Rent A Car in Lahore | New Ali Lajpal",
+  7: "Honda Civic Rent A Car in Lahore | New Ali Lajpal",
+  8: "Honda BRV Rent A Car in Lahore | New Ali Lajpal",
+  9: "Honda City Rent A Car in Lahore | New Ali Lajpal",
+  10: "Haval SUV Rent A Car in Lahore | New Ali Lajpal",
+  11: "Toyota Fortuner Rent A Car in Lahore | New Ali Lajpal",
+  12: "Toyota Prado Rent A Car in Lahore | New Ali Lajpal",
+  13: "Toyota Land Cruiser V8 Rent A Car in Lahore | New Ali Lajpal",
+  14: "Toyota Revo Rent A Car in Lahore | New Ali Lajpal",
+  15: "Audi Rent A Car in Lahore | New Ali Lajpal",
+  16: "Mercedes-Benz Rent A Car in Lahore | New Ali Lajpal",
+  17: "Limousine Rent A Car in Lahore | New Ali Lajpal",
+  18: "Toyota Coaster Rent A Car in Lahore | New Ali Lajpal",
+  19: "Toyota Grand Cabin Rent A Car in Lahore | New Ali Lajpal",
+  20: "Toyota Coaster 4C Rent A Car in Lahore | New Ali Lajpal",
+  21: "Toyota Coaster 5C Rent A Car in Lahore | New Ali Lajpal",
+  22: "Security Guard Service in Lahore | New Ali Lajpal",
+};
+
+const carMetaDescriptions = {
+  1: "Rent Suzuki Alto AGS in Lahore & Bahria Town. Economical automatic city car for daily rental, office travel, and airport pickup. Book with New Ali Lajpal.",
+  2: "Rent Suzuki Wagon R in Lahore & Bahria Town. Fuel-efficient 1000cc hatchback for family trips, daily commuting, and city travel. Book with New Ali Lajpal.",
+  3: "Rent Toyota Corolla in Lahore & Bahria Town. Comfortable sedan for family travel, business trips, and airport transfers. Book with New Ali Lajpal.",
+  4: "Rent Toyota Yaris in Lahore & Bahria Town. Modern, fuel-efficient sedan for corporate meetings, family trips, and airport drops. Book with New Ali Lajpal.",
+  5: "Rent Toyota Corolla Grande in Lahore & Bahria Town. Premium 1.8L sedan with luxury interior for executive travel, weddings, and tours. Book with New Ali Lajpal.",
+  6: "Rent KIA Sportage SUV in Lahore & Bahria Town. Modern 2.0L crossover for VIP travel, wedding events, and luxury family tours. Book with New Ali Lajpal.",
+  7: "Rent Honda Civic in Lahore & Bahria Town. Premium sedan for executive travel, weddings, and city tours with driver option. Book with New Ali Lajpal.",
+  8: "Rent Honda BR-V 7-seater SUV in Lahore & Bahria Town. Spacious family vehicle for group travel, tours, and long-distance routes. Book with New Ali Lajpal.",
+  9: "Rent Honda City in Lahore & Bahria Town. Stylish sedan for city travel, office use, and airport pick and drop. Book with New Ali Lajpal.",
+  10: "Rent Haval SUV in Lahore & Bahria Town. Modern luxury crossover for business executives, family tours, and wedding events. Book with New Ali Lajpal.",
+  11: "Rent Toyota Fortuner in Lahore & Bahria Town. Powerful 7-seater SUV for VIP protocol, northern area tours, and weddings. Book with New Ali Lajpal.",
+  12: "Rent Toyota Prado in Lahore & Bahria Town. High-end luxury SUV for VIP travel, protocol movement, and long routes. Book with New Ali Lajpal.",
+  13: "Rent Toyota Land Cruiser V8 in Lahore & Bahria Town. Ultimate luxury SUV for VIP protocol, corporate movement, and wedding events. Book with New Ali Lajpal.",
+  14: "Rent Toyota Revo in Lahore & Bahria Town. Powerful 4x4 double-cabin for northern areas, outdoor trips, and protocol travel. Book with New Ali Lajpal.",
+  15: "Rent Audi in Lahore & Bahria Town. Executive luxury car for weddings, business meetings, VIP airport pickup, and special events. Book with New Ali Lajpal.",
+  16: "Rent Mercedes-Benz in Lahore & Bahria Town. Premium luxury vehicle for wedding entry, corporate protocol, and VIP travel. Book with New Ali Lajpal.",
+  17: "Rent Limousine in Lahore & Bahria Town. High-end luxury vehicle for wedding bridal entry, VIP events, and photoshoots. Book with New Ali Lajpal.",
+  18: "Rent Toyota Coaster in Lahore & Bahria Town. 29-seater passenger van for group travel, wedding guest transport, and tours. Book with New Ali Lajpal.",
+  19: "Rent Toyota Hiace Grand Cabin in Lahore & Bahria Town. Spacious 13-seater van for family tours, airport travel, and group trips. Book with New Ali Lajpal.",
+  20: "Rent Coaster 4C in Lahore & Bahria Town. Reliable 29-seater group transport van with professional driver for tours and events. Book with New Ali Lajpal.",
+  21: "Rent Coaster 5C in Lahore & Bahria Town. Powerful 29-seater passenger van for long-distance group tours and staff transport. Book with New Ali Lajpal.",
+  22: "Hire professional Security Guard service in Lahore & Bahria Town for VIP protocol, wedding events, and secure family travel. Book with New Ali Lajpal.",
+};
 
 function CarDetailsPage() {
   const { id } = useParams();
@@ -22,18 +72,23 @@ function CarDetailsPage() {
     return null;
   }
 
+  const displayName = getCarDisplayName(car);
+
   // Construct WhatsApp Message for booking
-  const message = `Hello! I want to book the ${car.make} ${car.name}. Could you provide more details?`;
+  const message = `Hello! I want to book the ${displayName}. Could you provide more details?`;
   const whatsappNumber = '923057649991';
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  const pageTitle = carTitles[car.id] || `${displayName} Rent A Car in Lahore | New Ali Lajpal`;
+  const pageMetaDesc = carMetaDescriptions[car.id] || `Book ${displayName} with New Ali Lajpal Rent A Car in Bahria Town and Lahore. Comfort, reliability, and low rates.`;
 
   const carSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": `${car.make} ${car.name}`,
+    "name": displayName,
     "image": `https://newalilajpal.com${car.image}`,
     "url": `https://newalilajpal.com/car/${car.id}`,
-    "description": car.description || `Rent ${car.make} ${car.name} in Lahore.`,
+    "description": pageMetaDesc,
     "offers": {
       "@type": "Offer",
       "priceCurrency": "PKR",
@@ -45,9 +100,9 @@ function CarDetailsPage() {
   return (
     <main className="car-details-page">
       <SEO
-        title={`${car.make} ${car.name} Rent A Car - New Ali Lajpal`}
-        description={car.description || `Book ${car.make} ${car.name} with New Ali Lajpal Rent A Car. Best rent a car in Bahria Town, Teen Talwar.`}
-        keywords={`${car.make} ${car.name} rent, ${car.name} rent a car, rent a car Lahore, New Ali Lajpal, Ali Lajpal rent a car`}
+        title={pageTitle}
+        description={pageMetaDesc}
+        keywords={`${displayName} rent, ${car.name} rent a car, rent a car Lahore, New Ali Lajpal, Ali Lajpal rent a car`}
         url={`https://newalilajpal.com/car/${car.id}`}
         schemaData={carSchema}
       />
@@ -61,13 +116,13 @@ function CarDetailsPage() {
         <div className="car-details__content">
           {/* LEFT: IMAGE */}
           <div className="car-details__image-wrapper">
-            <img src={car.image} alt={`${car.make} ${car.name}`} className="car-details__image" />
+            <img src={car.image} alt={`${displayName} available for rent in Lahore`} className="car-details__image" />
           </div>
 
           {/* RIGHT: DETAILS */}
           <div className="car-details__info">
             <span className="car-details__badge">{car.category}</span>
-            <h1 className="car-details__title">{car.make} {car.name}</h1>
+            <h1 className="car-details__title">{displayName}</h1>
 
             <div className="car-details__price">
               {typeof car.price === 'number' ? `Rs. ${car.price.toLocaleString()}` : car.price}

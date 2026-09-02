@@ -375,7 +375,7 @@ function BlogPage() {
                 </div>
 
                 <div className="fleet-item">
-                  <img src="/imagess/ourcars/toyota-grandi-rental-bahria-town-lahore.webp" alt="Toyota Grande rental Bahria Town" loading="lazy" />
+                  <img src="/imagess/ourcars/toyota-grande-rental-bahria-town-lahore.webp" alt="Toyota Grande rental Bahria Town" loading="lazy" />
                   <div className="fleet-item__content">
                     <h3>Executive Sedans & Crossovers (Toyota Grande, KIA Sportage)</h3>
                     <p>For executive meetings, wedding ceremonies, or premium long-distance journeys, Toyota Corolla Grande and KIA Sportage deliver luxury comfort, modern interiors, and superior highway stability.</p>
@@ -476,7 +476,7 @@ function BlogPage() {
                 Allama Iqbal International Airport (LHE) is located approximately 35 to 45 kilometers from Bahria Town Lahore, depending on whether you take the Lahore Ring Road or Canal Bank Road. Arranging an advance airport transfer guarantees that a comfortable, air-conditioned car and professional chauffeur will be waiting for you upon landing, regardless of flight arrival times or delays.
               </p>
               <p>
-                Whether arriving on late-night international flights or heading out for early-morning domestic departures, pre-booking your airport car rental eliminates long taxi queues and unpredictable airport fare markups.
+                Whether arriving on late-night international flights or heading out for early-morning domestic departures, pre-booking your airport car rental with comfortable sedans like the <a href="/car/3">Toyota Corolla</a> or <a href="/car/7">Honda Civic</a> eliminates long taxi queues and unpredictable airport fare markups.
               </p>
             </section>
 
@@ -495,6 +495,7 @@ function BlogPage() {
               <ul className="article-list">
                 <li><strong>For Small Families (3-4 passengers):</strong> Compact hatchbacks like <a href="/car/2">Suzuki Wagon R</a> or sedans like <a href="/car/3">Toyota Corolla</a>.</li>
                 <li><strong>For Medium & Large Families (5+ passengers):</strong> Spacious crossovers like <a href="/car/6">KIA Sportage</a> providing higher ground clearance and expandable cargo room.</li>
+                <li><strong>For Multi-Generational Family Groups (7+ passengers):</strong> 7-seater vehicles like the <a href="/car/8">Honda BR-V</a> or passenger vans like the <a href="/car/18">Toyota Coaster</a> offering maximum seating capacity for extended family tours.</li>
               </ul>
             </section>
 

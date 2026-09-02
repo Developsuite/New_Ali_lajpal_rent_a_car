@@ -6,10 +6,10 @@ function Hero() {
       {/* Full Background Image — no overlay, no fade */}
       <div className="hero__bg">
         <picture>
-          <source media="(max-width: 768px)" srcSet="/imagess/hero_section/mobile_hero1.png" />
+          <source media="(max-width: 768px)" srcSet="/imagess/hero_section/mobile_hero1.webp" />
           <img
-            src="/imagess/hero_section/car1.png"
-            alt="Premium red car available for rent at New Ali Lajpal"
+            src="/imagess/hero_section/car1.webp"
+            alt="Premium red car available for rent at New Ali Lajpal in Bahria Town Lahore"
             className="hero__bg-img"
           />
         </picture>
@@ -34,7 +34,7 @@ function Hero() {
             <span className="hero__bar-subtitle">Rent A Car</span>
           </h1>
           <p className="hero__bar-description">
-            New Fast Rent A Cars Service provides comfortable rides for families, corporate travel, tours, airport pickup/drop and especially City to City Drop where you pay one-way charges only.
+            New Fast Rent A Cars Service provides comfortable rides for families, corporate travel, tours, airport pickup/drop and especially City to City Drop where you pay one-way charges only
           </p>
 
           {/* Mobile Only Service Bullet Points */}
@@ -47,7 +47,7 @@ function Hero() {
 
         {/* Right Bar — Call Us Now CTA */}
         <div className="hero__bar hero__bar--right">
-          <a href="tel:+920000000000" className="btn btn-primary btn-lg hero__bar-btn">
+          <a href="tel:+923057649991" className="btn btn-primary btn-lg hero__bar-btn">
             <svg className="hero__bar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>

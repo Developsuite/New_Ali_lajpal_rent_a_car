@@ -30,16 +30,21 @@ function HomePage() {
       "latitude": 31.5204,
       "longitude": 74.3587
     },
+    "areaServed": [
+      "Bahria Town Lahore",
+      "Teen Talwar Chowk",
+      "Lahore"
+    ],
     "priceRange": "$$",
-    "description": "Looking for Ali Lajpal? Discover New Ali Lajpal Rent A Car. We provide premium rent a car services in Bahria Town, Teen Talwar, and Lahore. Best cars rent."
+    "description": "New Ali Lajpal Rent A Car provides reliable car rental services in Bahria Town, near Teen Talwar, and across Lahore with flexible daily, monthly, and airport transfer plans."
   };
 
   return (
     <main>
       <SEO
-        title="New Ali Lajpal Rent A Car - Best in Bahria Town & Lahore"
-        description="Searching for Ali Lajpal? Choose New Ali Lajpal Rent A Car for the most reliable rent a car services in Bahria Town and Teen Talwar. The best cars rent in Lahore!"
-        keywords="New Ali Lajpal, Ali Lajpal Rent a car, Lajpal car rental service, best car rent behria town, Bahria Town Lahore car rental , cars rental company lahore, luxury car rental service"
+        title="Rent A Car Bahria Town & Lahore | New Ali Lajpal"
+        description="Book reliable cars for rent in Bahria Town, near Teen Talwar, and across Lahore. Economy hatchbacks, sedans, luxury SUVs, airport transfers, and one-way city drops."
+        keywords="rent a car Bahria Town, rent a car Lahore, car rental Bahria Town, New Ali Lajpal Rent A Car, luxury car rental Lahore, airport transfer Lahore"
         url="https://newalilajpal.com/"
         schemaData={homeSchema}
       />

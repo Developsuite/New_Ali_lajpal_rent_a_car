@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './BookingSection.css';
-import { carsData } from '../../data/carsData';
+import { carsData, getCarDisplayName } from '../../data/carsData';
 
 function BookingSection() {
   const [formData, setFormData] = useState({
@@ -118,8 +118,8 @@ Pickup Point: ${pickup || 'N/A'}`;
                     >
                       <option value="" disabled>Select...</option>
                       {carsData.map((carItem) => (
-                        <option key={carItem.id} value={`${carItem.make} ${carItem.name}`}>
-                          {carItem.make} {carItem.name}
+                        <option key={carItem.id} value={getCarDisplayName(carItem)}>
+                          {getCarDisplayName(carItem)}
                         </option>
                       ))}
                       <option value="Other">Other (Please discuss)</option>

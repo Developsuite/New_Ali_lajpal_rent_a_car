@@ -13,7 +13,7 @@ const RoutesSection = () => {
             City to City <span className="text-gradient">Routes Network</span>
           </h2>
           <p className="routes-section__desc">
-            Our main hub is <strong>Lahore</strong> with direct city connections across Pakistan.
+            Our hub is in <strong>Bahria Town, near Teen Talwar</strong>, and we serve every sector of Bahria Town, DHA, Gulberg, Johar Town and all of Lahore — including airport transfers and city-to-city travel across Pakistan.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import OurCars from '../../components/OurCars/OurCars';
 import BookingSection from '../../components/BookingSection/BookingSection';
 import FooterCarSection from '../../components/FooterCarSection/FooterCarSection';
 import './CarsPage.css';
-import { carsData } from '../../data/carsData';
+import { carsData, getCarDisplayName } from '../../data/carsData';
 
 function CarsPage() {
   // Generate structured data for the fleet
@@ -13,8 +13,8 @@ function CarsPage() {
     "position": index + 1,
     "item": {
       "@type": "Product",
-      "name": car.name,
-      "description": `${car.make} ${car.name} available for rent in Lahore.`,
+      "name": getCarDisplayName(car),
+      "description": `${getCarDisplayName(car)} available for rent in Lahore.`,
       "category": car.category,
       "offers": {
         "@type": "Offer",
@@ -34,9 +34,9 @@ function CarsPage() {
   return (
     <main className="cars-page">
       <SEO
-        title="Our Fleet - New Ali Lajpal Rent A Car"
-        description="Browse the full fleet of New Ali Lajpal Rent A Car. We offer the best rent a car and cars rent options in Bahria Town, Teen Talwar, and Lahore. Searching for Ali Lajpal? Choose New Ali Lajpal!"
-        keywords="New Ali Lajpal, Ali Lajpal Rent a car, Lajpal car rental service, best car rent behria town, Bahria Town Lahore car rental , cars rental company lahore, luxury car rental service"
+        title="Cars for Rent in Lahore & Bahria Town | Fleet | New Ali Lajpal"
+        description="Browse our full fleet of cars for rent in Lahore and Bahria Town. Economy hatchbacks, sedans, luxury SUVs, and group vans available with driver or self-drive."
+        keywords="cars for rent Lahore, car rental fleet Lahore, available rental cars, cars for rent Bahria Town, New Ali Lajpal fleet"
         schemaData={carsSchema}
         url="https://newalilajpal.com/cars-fleet-for-rent"
       />
@@ -44,17 +44,17 @@ function CarsPage() {
         <div className="cars-page__header-content">
           <img
             src="/imagess/ourcars/kia-sportage-best-car-rental-lahore.webp"
-            alt="Decoration Car Left"
+            alt=""
             className="cars-page__decor cars-page__decor--left"
             loading="lazy"
           />
           <div className="cars-page__text">
             <h1 className="cars-page__title">Our Complete <span className="text-gradient">Fleet</span></h1>
-            <p className="cars-page__subtitle">Browse our full selection of premium vehicles available for rent in Lahore.</p>
+            <p className="cars-page__subtitle">Browse our full fleet of cars for rent in Lahore and Bahria Town — from fuel-efficient economy hatchbacks and comfortable sedans to premium SUVs and large vehicles for groups.</p>
           </div>
           <img
             src="/imagess/remaining/honda-civic-car-rental-bahria-town-lahore.webp"
-            alt="Decoration Car Right"
+            alt=""
             className="cars-page__decor cars-page__decor--right"
             loading="lazy"
           />

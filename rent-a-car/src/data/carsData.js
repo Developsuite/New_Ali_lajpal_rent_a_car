@@ -20,7 +20,7 @@ export const carsData = [
   },
   {
     id: 2,
-    name: 'Suzuki Wagon R',
+    name: 'Wagon R',
     make: 'Suzuki',
     transmission: 'Manual',
     type: 'Manual',
@@ -39,10 +39,10 @@ export const carsData = [
   },
   {
     id: 3,
-    name: 'Toyota Corolla', // Using the generic name, description provided GLi, but this ID maps to standard Corolla. I will combine.
+    name: 'Corolla',
     make: 'Toyota',
     transmission: 'Manual',
-    type: 'Automatic', // It was auto before, but description says Manual for GLi. Let's keep it based on description.
+    type: 'Automatic',
     category: 'Sedan Cars',
     price: 4000,
     seats: 5,
@@ -58,7 +58,7 @@ export const carsData = [
   },
   {
     id: 4,
-    name: 'Toyota Yaris',
+    name: 'Yaris',
     make: 'Toyota',
     transmission: 'Manual / Automatic',
     type: 'Automatic',
@@ -77,7 +77,7 @@ export const carsData = [
   },
   {
     id: 5,
-    name: 'Toyota Grande',
+    name: 'Grande',
     make: 'Toyota',
     transmission: 'Automatic',
     type: 'Automatic',
@@ -85,7 +85,7 @@ export const carsData = [
     price: 7000,
     seats: 5,
     featured: true,
-    image: '/imagess/ourcars/toyota-grandi-rental-bahria-town-lahore.webp',
+    image: '/imagess/ourcars/toyota-grande-rental-bahria-town-lahore.webp',
     description: 'Toyota Corolla Grande is a premium sedan with a stylish interior, smooth automatic drive, and comfortable seating. It is ideal for executive travel, family tours, weddings, and official use. Grande gives a better luxury feel compared to standard sedan cars.',
     engine: '1.8L Dual VVT-i',
     ac: 'Yes, fully air-conditioned',
@@ -96,7 +96,7 @@ export const carsData = [
   },
   {
     id: 6,
-    name: 'KIA Sportage',
+    name: 'Sportage',
     make: 'KIA',
     transmission: 'Automatic',
     type: 'Automatic',
@@ -115,7 +115,7 @@ export const carsData = [
   },
   {
     id: 7,
-    name: 'Honda Civic',
+    name: 'Civic',
     make: 'Honda',
     transmission: 'Automatic',
     type: 'Automatic',
@@ -134,7 +134,7 @@ export const carsData = [
   },
   {
     id: 8,
-    name: 'Honda BRV',
+    name: 'BRV',
     make: 'Honda',
     transmission: 'Automatic / Manual',
     type: 'Automatic',
@@ -153,7 +153,7 @@ export const carsData = [
   },
   {
     id: 9,
-    name: 'Honda City',
+    name: 'City',
     make: 'Honda',
     transmission: 'Manual / Automatic',
     type: 'Automatic',
@@ -191,7 +191,7 @@ export const carsData = [
   },
   {
     id: 11,
-    name: 'Toyota Fortuner',
+    name: 'Fortuner',
     make: 'Toyota',
     transmission: 'Automatic',
     type: 'Automatic',
@@ -210,7 +210,7 @@ export const carsData = [
   },
   {
     id: 12,
-    name: 'Toyota Prado',
+    name: 'Prado',
     make: 'Toyota',
     transmission: 'Automatic',
     type: 'Automatic',
@@ -229,7 +229,7 @@ export const carsData = [
   },
   {
     id: 13,
-    name: 'Toyota Land Cruiser V8',
+    name: 'Land Cruiser V8',
     make: 'Toyota',
     transmission: 'Automatic',
     type: 'Automatic',
@@ -248,7 +248,7 @@ export const carsData = [
   },
   {
     id: 14,
-    name: 'Toyota Revo',
+    name: 'Revo',
     make: 'Toyota',
     transmission: 'Manual / Automatic',
     type: 'Automatic',
@@ -256,7 +256,7 @@ export const carsData = [
     price: 13000,
     seats: 5,
     featured: false,
-    image: '/imagess/remaining/toyato-revo-bahria-rent-a-car.webp',
+    image: '/imagess/remaining/toyota-revo-bahria-rent-a-car.webp',
     description: 'Toyota Revo is a powerful double-cabin vehicle suitable for long routes, northern areas, business travel, security protocol, and outdoor trips. It is strong, reliable, and perfect for rough roads and highway travel in Pakistan.',
     engine: '2.8L Diesel',
     ac: 'Yes, fully air-conditioned',
@@ -294,7 +294,7 @@ export const carsData = [
     price: 'Call for Price',
     seats: 5,
     featured: true,
-    image: '/imagess/remaining/mercedes-premium-rent-a car-lahore.webp',
+    image: '/imagess/remaining/mercedes-premium-rent-a-car-lahore.webp',
     description: 'Mercedes is a luxury executive vehicle, ideal for VIP guests, wedding events, corporate protocol, and premium travel. It offers a smooth drive, elegant interior, and high-class comfort, making it perfect for special occasions.',
     engine: 'Depending on model and variant',
     ac: 'Yes, fully air-conditioned',
@@ -313,7 +313,7 @@ export const carsData = [
     price: 'Call for Price',
     seats: 8,
     featured: false,
-    image: '/imagess/remaining/lamousine-luxury-car-rent-service.webp',
+    image: '/imagess/remaining/limousine-luxury-car-rent-service.webp',
     description: 'Limousine is a premium luxury vehicle for weddings, bridal entry, VIP events, photoshoots, and special occasions. It gives a unique and high-end experience for customers who want something special and memorable.',
     engine: 'Depending on model',
     ac: 'Yes, fully air-conditioned',
@@ -324,7 +324,7 @@ export const carsData = [
   },
   {
     id: 18,
-    name: 'Toyota Coaster',
+    name: 'Coaster',
     make: 'Toyota',
     transmission: 'Manual',
     type: 'Van',
@@ -332,7 +332,7 @@ export const carsData = [
     price: 'Call for Price',
     seats: 29,
     featured: false,
-    image: '/imagess/remaining/toyota-coster-rantal-service-lahore.webp',
+    image: '/imagess/remaining/toyota-coaster-rental-service-lahore.webp',
     description: 'Toyota Coaster is a comfortable passenger vehicle for group travel, tours, school trips, staff transport, wedding guest transport, and corporate events. It is ideal for long routes and large groups who need safe and comfortable transport.',
     engine: 'Diesel engine, depending on model',
     ac: 'Yes, fully air-conditioned',
@@ -389,7 +389,7 @@ export const carsData = [
     price: 'Call for Price',
     seats: 29,
     featured: false,
-    image: '/imagess/remaining/coster-5c-bahria-car-rent-lahore.webp',
+    image: '/imagess/remaining/coaster-5c-bahria-car-rent-lahore.webp',
     description: 'Coaster 5C is a strong and reliable passenger vehicle for long-distance group travel. It is ideal for tours, events, staff transport, and wedding guest movement. It provides good seating capacity and is suitable for Pakistani road conditions.',
     engine: '5C Diesel Engine',
     ac: 'Yes, fully air-conditioned',
@@ -418,3 +418,13 @@ export const carsData = [
     best_for: 'VIP protocol, business guests, weddings, family security, event movement',
   },
 ];
+
+export const getCarDisplayName = (car) => {
+  if (!car) return '';
+  if (car.make === 'Service') return car.name;
+
+  return car.name.toLowerCase().startsWith(car.make.toLowerCase())
+    ? car.name
+    : `${car.make} ${car.name}`;
+};
+

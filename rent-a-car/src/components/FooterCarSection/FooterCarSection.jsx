@@ -8,8 +8,8 @@ const FooterCarSection = () => {
         <div className="footer-car__wrapper">
           
           <div className="footer-car__showcase">
-            <h1 className="footer-car__giant-text">RENT A CAR</h1>
-            <img src="/imagess/car.png" alt="Rent a Car Now" className="footer-car__image" />
+            <div className="footer-car__giant-text">RENT A CAR</div>
+            <img src="/imagess/car.png" alt="Rent a Car Now" className="footer-car__image" loading="lazy" />
           </div>
 
           <h3 className="footer-car__subheading">Find Your Perfect Car</h3>
