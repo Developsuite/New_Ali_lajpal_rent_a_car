@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import SEO from '../../components/SEO/SEO';
 import { carsData, getCarDisplayName } from '../../data/carsData';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import './CarDetailsPage.css';
 
 const carTitles = {
@@ -56,7 +57,6 @@ const carMetaDescriptions = {
 
 function CarDetailsPage() {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   // Find the car by ID
   const car = carsData.find(c => c.id === parseInt(id));
@@ -66,10 +66,9 @@ function CarDetailsPage() {
     window.scrollTo(0, 0);
   }, [id]);
 
-  // If car not found, redirect to Cars page
+  // If car not found, render 404 page
   if (!car) {
-    navigate('/cars');
-    return null;
+    return <NotFoundPage />;
   }
 
   const displayName = getCarDisplayName(car);

@@ -1,0 +1,134 @@
+.not-found-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background-color: var(--bg-dark, #fdfeff);
+  color: #ffffff;
+}
+
+.not-found__container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+  background: #5b7cc9;
+  border: 1px solid #f9fbfd;
+  border-radius: 4rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.452);
+}
+
+.not-found__badge {
+  display: inline-block;
+  background: rgba(252, 247, 248, 0.295);
+  color: #e11d48;
+  font-weight: 700;
+  font-size: 0.85rem;
+  font-family: figtree;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.not-found__title {
+  font-size: 2.25rem;
+  font-family: figtree;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.not-found__description {
+  color: #eaeef5;
+  font-size: 1.05rem;
+  font-family: figtree;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.not-found__nav-box {
+  text-align: left;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.not-found__nav-heading {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  font-family: figtree;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.not-found__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.not-found__nav-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+.not-found__nav-list li:last-child {
+  margin-bottom: 0;
+}
+
+.not-found__nav-list a {
+  color: #38bdf8;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.not-found__nav-list a:hover {
+  text-decoration: underline;
+}
+
+.not-found__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.not-found__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.not-found__btn--primary {
+  background-color: #e11d48;
+  color: #ffffff;
+}
+
+.not-found__btn--primary:hover {
+  background-color: #be123d62;
+  color: #f50505;
+  
+}
+
+.not-found__btn--secondary {
+  background-color: transparent;
+  border: 1px solid #374151;
+  color: #ffffff;
+}
+
+.not-found__btn--secondary:hover {
+  background-color: #1f2937;
+}

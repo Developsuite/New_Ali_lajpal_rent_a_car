@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import CarsPage from './pages/CarsPage/CarsPage';
 import CarDetailsPage from './pages/CarDetailsPage/CarDetailsPage';
 import BlogPage from './pages/BlogPage/BlogPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/cars-fleet-for-rent" element={<CarsPage />} />
         <Route path="/car/:id" element={<CarDetailsPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <FooterSection />
       <FloatingWhatsApp />

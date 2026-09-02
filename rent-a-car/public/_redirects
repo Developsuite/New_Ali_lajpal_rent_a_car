@@ -3,5 +3,28 @@ http://www.newalilajpal.com/* https://newalilajpal.com/:splat 301!
 https://www.newalilajpal.com/* https://newalilajpal.com/:splat 301!
 http://newalilajpal.com/* https://newalilajpal.com/:splat 301!
 
-# SPA Routing Fallback
-/* /index.html 200
+# Valid SPA Route Rewrites (do not use /* catch-all to prevent 200 status on 404 routes)
+/cars-fleet-for-rent /index.html 200
+/blog /index.html 200
+/car/1 /index.html 200
+/car/2 /index.html 200
+/car/3 /index.html 200
+/car/4 /index.html 200
+/car/5 /index.html 200
+/car/6 /index.html 200
+/car/7 /index.html 200
+/car/8 /index.html 200
+/car/9 /index.html 200
+/car/10 /index.html 200
+/car/11 /index.html 200
+/car/12 /index.html 200
+/car/13 /index.html 200
+/car/14 /index.html 200
+/car/15 /index.html 200
+/car/16 /index.html 200
+/car/17 /index.html 200
+/car/18 /index.html 200
+/car/19 /index.html 200
+/car/20 /index.html 200
+/car/21 /index.html 200
+/car/22 /index.html 200
