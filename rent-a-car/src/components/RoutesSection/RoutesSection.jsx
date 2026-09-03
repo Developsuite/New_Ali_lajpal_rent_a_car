@@ -1,4 +1,3 @@
-import React from 'react';
 import './RoutesSection.css';
 
 const RoutesSection = () => {
@@ -8,7 +7,7 @@ const RoutesSection = () => {
       <div className="routes-section__bg" style={{ backgroundImage: "url('/imagess/pakistan_monuments_bg.png')" }}></div>
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="routes-section__header">
-          <h4 className="routes-section__overline">Nationwide Coverage</h4>
+          <span className="routes-section__overline">Nationwide Coverage</span>
           <h2 className="routes-section__title">
             City to City <span className="text-gradient">Routes Network</span>
           </h2>

@@ -1,4 +1,3 @@
-import React from 'react';
 import SEO from '../../components/SEO/SEO';
 import OurCars from '../../components/OurCars/OurCars';
 import BookingSection from '../../components/BookingSection/BookingSection';

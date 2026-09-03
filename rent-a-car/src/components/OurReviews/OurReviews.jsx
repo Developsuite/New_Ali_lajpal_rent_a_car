@@ -1,4 +1,3 @@
-import React from 'react';
 import './OurReviews.css';
 
 const reviewsData = [
@@ -100,7 +99,7 @@ function OurReviews() {
                       {review.name.charAt(0)}
                     </div>
                     <div className="our-reviews__meta">
-                      <h4 className="our-reviews__name">{review.name}</h4>
+                      <div className="our-reviews__name">{review.name}</div>
                       <span className="our-reviews__date">{review.date}</span>
                     </div>
                   </div>
@@ -128,7 +127,7 @@ function OurReviews() {
                       {review.name.charAt(0)}
                     </div>
                     <div className="our-reviews__meta">
-                      <h4 className="our-reviews__name">{review.name}</h4>
+                      <div className="our-reviews__name">{review.name}</div>
                       <span className="our-reviews__date">{review.date}</span>
                     </div>
                   </div>

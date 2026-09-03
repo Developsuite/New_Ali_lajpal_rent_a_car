@@ -1,4 +1,3 @@
-import React from 'react';
 import './FooterCarSection.css';
 
 const FooterCarSection = () => {
@@ -12,7 +11,7 @@ const FooterCarSection = () => {
             <img src="/imagess/car.png" alt="Rent a Car Now" className="footer-car__image" loading="lazy" />
           </div>
 
-          <h3 className="footer-car__subheading">Find Your Perfect Car</h3>
+          <h2 className="footer-car__subheading">Find Your Perfect Rental Car</h2>
 
           <div className="footer-car__buttons">
             <a href="tel:+923057649991" className="btn-pill btn-call">

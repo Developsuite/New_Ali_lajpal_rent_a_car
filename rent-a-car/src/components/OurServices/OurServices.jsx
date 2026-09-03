@@ -85,7 +85,6 @@ const servicesData = [
 
 function OurServices() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeService = servicesData[activeIndex];
 
   return (
     <section className="our-services" id="our-services">

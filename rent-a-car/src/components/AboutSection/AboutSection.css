@@ -106,6 +106,16 @@
   max-width: 95%;
 }
 
+.about-section__desc a {
+  color: #D42020;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-section__desc a:hover {
+  text-decoration: underline;
+}
+
 /* FEATURES GRID */
 .about-section__features-grid {
   display: grid;

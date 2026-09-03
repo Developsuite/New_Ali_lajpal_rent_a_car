@@ -17,13 +17,6 @@ function OurCars({ limit = null, hideHeader = false, showFilters = false }) {
 
   const whatsappNumber = '923057649991';
 
-  const handleBookNow = (carName) => {
-    const message = encodeURIComponent(
-      `Hello! I am interested in renting the ${carName}. Could you please provide more details?`
-    );
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
-  };
-
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters(prev => ({ ...prev, [name]: value }));

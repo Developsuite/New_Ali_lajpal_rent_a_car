@@ -34,7 +34,7 @@ function Hero() {
             <span className="hero__bar-subtitle">Rent A Car</span>
           </h1>
           <p className="hero__bar-description">
-            New Fast Rent A Cars Service provides comfortable rides for families, corporate travel, tours, airport pickup/drop and especially City to City Drop where you pay one-way charges only
+            New Ali Lajpal Rent A Car provides comfortable rides for families, corporate travel, tours, airport pickup and drop, and city-to-city one-way travel across Pakistan.
           </p>
 
           {/* Mobile Only Service Bullet Points */}

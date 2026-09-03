@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './BookingSection.css';
 import { carsData, getCarDisplayName } from '../../data/carsData';
 

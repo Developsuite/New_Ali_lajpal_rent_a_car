@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -29,7 +28,7 @@ const AboutSection = () => {
           {/* RIGHT COLUMN: CONTENT */}
           <div className="about-section__content-col">
             <div className="about-section__content-top">
-              <h5 className="about-section__overline">Contact Us</h5>
+              <span className="about-section__overline">Contact Us</span>
               
               <h2 className="about-section__title">
                 Get in touch with our <span className="highlight-text">team</span> <br />
@@ -37,7 +36,7 @@ const AboutSection = () => {
               </h2>
               
               <p className="about-section__desc">
-                Contact Ali Lajpal Rent A Car for bookings, inquiries, or any assistance you might need. We are available 24/7 to ensure your journey is seamless and comfortable.
+                Contact Ali Lajpal Rent A Car for bookings, inquiries, or any assistance you might need. We are available 24/7 to ensure your journey is seamless and comfortable. Whether you need an airport transfer to Allama Iqbal International Airport or a one-way city drop, explore our <a href="/cars-fleet-for-rent">car rental fleet</a> or read our <a href="/blog">car rental blog</a> for travel tips.
               </p>
             </div>
             
@@ -52,7 +51,7 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div className="about-feature__content">
-                  <h4>Contact Us</h4>
+                  <h3>Contact Us</h3>
                   <p>+92 305 7649991 <br/> saqibraza8154@gmail.com</p>
                 </div>
               </div>
@@ -66,8 +65,8 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div className="about-feature__content">
-                  <h4>Our Location</h4>
-                  <p>Lahore, Pakistan <br/> Main Boulevard</p>
+                  <h3>Our Location</h3>
+                  <p>Bahria Town, Lahore <br/> Teen Talwar Chowk</p>
                 </div>
               </div>
             </div>
