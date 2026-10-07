@@ -121,7 +121,9 @@ function CarDetailsPage() {
           {/* RIGHT: DETAILS */}
           <div className="car-details__info">
             <span className="car-details__badge">{car.category}</span>
-            <h1 className="car-details__title">{displayName}</h1>
+            <h1 className="car-details__title">
+              {car.make === 'Service' ? `${displayName} Service in Lahore` : `${displayName} Rent a Car in Lahore`}
+            </h1>
 
             <div className="car-details__price">
               {typeof car.price === 'number' ? `Rs. ${car.price.toLocaleString()}` : car.price}
@@ -171,6 +173,27 @@ function CarDetailsPage() {
               </svg>
               <span>Book on WhatsApp</span>
             </a>
+          </div>
+        </div>
+
+        {/* RELATED CARS & NAVIGATION LINKS */}
+        <div className="car-details__disclaimer">
+          <h3 className="car-details__disclaimer-title">More Rental Vehicles & Travel Guides</h3>
+          <div className="car-details__related-links">
+            <Link to="/cars-fleet-for-rent" className="car-details__related-tag">
+              View All Rental Cars
+            </Link>
+            <Link to="/blog" className="car-details__related-tag">
+              Car Rental Guide
+            </Link>
+            {carsData
+              .filter(c => c.id !== car.id && (c.category === car.category || c.make === car.make))
+              .slice(0, 3)
+              .map(relatedCar => (
+                <Link key={relatedCar.id} to={`/car/${relatedCar.id}`} className="car-details__related-tag">
+                  Rent {getCarDisplayName(relatedCar)}
+                </Link>
+              ))}
           </div>
         </div>
 

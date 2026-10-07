@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './FooterSection.css';
 
 const FooterSection = () => {
@@ -27,7 +28,8 @@ const FooterSection = () => {
             <h3 className="main-footer__title">Useful Links</h3>
             <ul className="main-footer__list">
               <li><a href="/#best-rent-a-car-bahria-town">Home</a></li>
-              <li><a href="/cars-fleet-for-rent">Our Cars</a></li>
+              <li><Link to="/cars-fleet-for-rent">Our Fleet</Link></li>
+              <li><Link to="/blog">Blog & Guides</Link></li>
               <li><a href="/#our-car-rental-services-in-lahore">Services</a></li>
               <li><a href="/#why-choose-for-car-rental-in-lahore">Why Choose Us</a></li>
               <li><a href="/#customer-reviews-on-car-rental-in-lahore">Reviews</a></li>

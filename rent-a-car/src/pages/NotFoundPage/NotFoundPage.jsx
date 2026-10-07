@@ -21,20 +21,20 @@ const NotFoundPage = () => {
           <h2 className="not-found__nav-heading">Useful Navigation</h2>
           <ul className="not-found__nav-list">
             <li>
-              <strong>Whatsapp Now:</strong>{' '}
-              <a href="https://wa.me/923057649991?text=Hello%2C%20I%20need%20a%20rental%20car">Click here</a>
+              <strong>WhatsApp Booking:</strong>{' '}
+              <a href="https://wa.me/923057649991?text=Hello%2C%20I%20need%20a%20rental%20car" target="_blank" rel="noopener noreferrer">Contact Us on WhatsApp</a>
             </li>
             <li>
-              <strong>Website:</strong>{' '}
-              <a href="https://newalilajpal.com/">https://newalilajpal.com/</a>
+              <strong>Homepage:</strong>{' '}
+              <Link to="/">New Ali Lajpal Rent A Car Homepage</Link>
             </li>
             <li>
-              <strong>Blog:</strong>{' '}
-              <a href="https://newalilajpal.com/blog">https://newalilajpal.com/blog</a>
+              <strong>Car Rental Guide:</strong>{' '}
+              <Link to="/blog">Lahore & Bahria Town Car Rental Blog</Link>
             </li>
             <li>
-              <strong>Car Fleet:</strong>{' '}
-              <a href="https://newalilajpal.com/cars-fleet-for-rent">https://newalilajpal.com/cars-fleet-for-rent</a>
+              <strong>Vehicle Fleet:</strong>{' '}
+              <Link to="/cars-fleet-for-rent">Explore Complete Car Rental Fleet</Link>
             </li>
           </ul>
         </div>

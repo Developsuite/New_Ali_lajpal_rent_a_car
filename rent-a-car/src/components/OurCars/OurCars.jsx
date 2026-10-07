@@ -185,7 +185,11 @@ function OurCars({ limit = null, hideHeader = false, showFilters = false }) {
                       <div className="car-card__content">
                         <div className="car-card__main">
                           <div className="car-card__top">
-                            <h3 className="car-card__name">{displayName}</h3>
+                            <h3 className="car-card__name">
+                              <Link to={`/car/${car.id}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                {displayName}
+                              </Link>
+                            </h3>
                             <div className="car-card__price">
                               <span className="car-card__price-value">
                                 {typeof car.price === 'number' ? `Rs ${car.price.toLocaleString()}` : car.price}
@@ -196,8 +200,8 @@ function OurCars({ limit = null, hideHeader = false, showFilters = false }) {
                           <div className="car-card__divider"></div>
                           <div className="car-card__bottom">
                             <div className="car-card__action-buttons">
-                              <Link to={`/car/${car.id}`} className="car-card__details-btn">
-                                Details
+                              <Link to={`/car/${car.id}`} className="car-card__details-btn" aria-label={`View details for ${displayName}`}>
+                                View Details
                               </Link>
                               <a 
                                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Hello! I am interested in renting the ' + displayName)}`}
@@ -228,9 +232,9 @@ function OurCars({ limit = null, hideHeader = false, showFilters = false }) {
           
           {limit && !showAll && carsData.length > limit && (
             <div className="our-cars__explore-more">
-              <button className="our-cars__explore-btn" onClick={() => setShowAll(true)}>
-                Explore More Cars
-              </button>
+              <Link to="/cars-fleet-for-rent" className="our-cars__explore-btn">
+                Explore Full Rental Fleet
+              </Link>
             </div>
           )}
         </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -36,7 +37,7 @@ const AboutSection = () => {
               </h2>
               
               <p className="about-section__desc">
-                Contact Ali Lajpal Rent A Car for bookings, inquiries, or any assistance you might need. We are available 24/7 to ensure your journey is seamless and comfortable. Whether you need an airport transfer to Allama Iqbal International Airport or a one-way city drop, explore our <a href="/cars-fleet-for-rent">car rental fleet</a> or read our <a href="/blog">car rental blog</a> for travel tips.
+                Contact Ali Lajpal Rent A Car for bookings, inquiries, or any assistance you might need. We are available 24/7 to ensure your journey is seamless and comfortable. Whether you need an airport transfer to Allama Iqbal International Airport or a one-way city drop, explore our <Link to="/cars-fleet-for-rent">car rental fleet</Link> or read our <Link to="/blog">car rental blog</Link> for travel tips.
               </p>
             </div>
             

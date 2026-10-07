@@ -48,7 +48,7 @@ function CarsPage() {
             loading="lazy"
           />
           <div className="cars-page__text">
-            <h1 className="cars-page__title">Our Complete <span className="text-gradient">Fleet</span></h1>
+            <h1 className="cars-page__title">Cars for Rent in Bahria Town <span className="text-gradient">Lahore</span></h1>
             <p className="cars-page__subtitle">Browse our full fleet of cars for rent in Lahore and Bahria Town — from fuel-efficient economy hatchbacks and comfortable sedans to premium SUVs and large vehicles for groups.</p>
           </div>
           <img

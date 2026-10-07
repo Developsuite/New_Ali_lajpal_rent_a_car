@@ -30,7 +30,7 @@ function Hero() {
         {/* Middle Bar — Company Name */}
         <div className="hero__bar hero__bar--center">
           <h1 className="hero__bar-title">
-            New Ali Lajpal
+            New Ali Lajpal 
             <span className="hero__bar-subtitle">Rent A Car</span>
           </h1>
           <p className="hero__bar-description">
