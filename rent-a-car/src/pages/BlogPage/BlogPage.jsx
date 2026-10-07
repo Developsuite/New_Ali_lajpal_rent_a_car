@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import SEO from '../../components/SEO/SEO';
 import './BlogPage.css';
 
