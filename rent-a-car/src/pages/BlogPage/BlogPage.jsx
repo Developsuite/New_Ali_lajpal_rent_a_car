@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO/SEO';
 import './BlogPage.css';
 
@@ -163,9 +164,9 @@ function BlogPage() {
       <section className="blog-hero">
         <div className="container blog-hero__container">
           <nav className="blog-breadcrumbs" aria-label="Breadcrumb navigation">
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
             <div>/</div>
-            <div><a href="/blog">Car Rental in Bahria Town Lahore</a></div>
+            <div><Link to="/blog">Car Rental in Bahria Town Lahore</Link></div>
           </nav>
           <div className="blog-hero__content">
             <div className="blog-hero__text">
@@ -176,12 +177,12 @@ function BlogPage() {
                 Everything you need to know about choosing reliable rental cars, with drivers, airport transfers, family travel, and monthly car rentals in Bahria Town and across Lahore.
               </p>
               <div className="blog-hero__actions">
-                <a href="/cars-fleet-for-rent" className="btn btn-primary btn-lg">
+                <Link to="/cars-fleet-for-rent" className="btn btn-primary btn-lg">
                   Explore Our Cars
-                </a>
-                <a href="/#contact-us-for-car-rental" className="btn btn-outline btn-lg">
+                </Link>
+                <Link to="/#contact-us" className="btn btn-outline btn-lg">
                   Contact Rental Team
-                </a>
+                </Link>
               </div>
             </div>
             <div className="blog-hero__image-wrapper">
@@ -266,7 +267,7 @@ function BlogPage() {
                 For residents, visitors, corporate delegates, and overseas Pakistanis returning home for holidays, securing the <strong>best car rental in Bahria Town Lahore</strong> ensures that your daily commute or intercity journeys remain stress-free. Choosing an established, locally grounded car rental agency eliminates concerns about vehicle maintenance breakdowns, hidden surcharge fees, or unpunctual drivers.
               </p>
               <p>
-                This comprehensive guide explores everything you need to evaluate before reserving a vehicle—ranging from fleet categories (economy hatchbacks to luxury executive sedans) to specialized services such as <a href="/#our-car-rental-services-in-lahore">chauffeured car rental in Lahore</a>, airport transfers, and long-term monthly rentals.
+                This comprehensive guide explores everything you need to evaluate before reserving a vehicle—ranging from fleet categories (economy hatchbacks to luxury executive sedans) to specialized services such as <Link to="/#our-services">chauffeured car rental in Lahore</Link>, airport transfers, and long-term monthly rentals.
               </p>
             </section>
 
@@ -291,7 +292,7 @@ function BlogPage() {
                 <li><strong>Temporary Vehicle Replacement:</strong> Seamless mobility when your personal vehicle is under scheduled workshop maintenance.</li>
               </ul>
               <p>
-                Having access to <a href="/cars-fleet-for-rent">our available rental cars in Lahore</a> allows you to travel on your own schedule without waiting for ride-share drivers or worrying about peak-hour surcharges.
+                Having access to <Link to="/cars-fleet-for-rent">our available rental cars in Lahore</Link> allows you to travel on your own schedule without waiting for ride-share drivers or worrying about peak-hour surcharges.
               </p>
             </section>
 
@@ -325,7 +326,7 @@ function BlogPage() {
               </div>
 
               <p>
-                At <strong>New Ali Lajpal Rent A Car</strong>, we take pride in maintaining clear communication, well-serviced vehicles, and dedicated support for every customer. You can learn more about our commitment to excellence on our <a href="/#why-choose-for-car-rental-in-lahore">Why Choose Us page</a>.
+                At <strong>New Ali Lajpal Rent A Car</strong>, we take pride in maintaining clear communication, well-serviced vehicles, and dedicated support for every customer. You can learn more about our commitment to excellence on our <Link to="/#why-choose">Why Choose Us page</Link>.
               </p>
             </section>
 
@@ -351,8 +352,8 @@ function BlogPage() {
                       <li><span>Best For:</span> Daily commuting, short city trips</li>
                     </ul>
                     <div className="fleet-item__links">
-                      <a href="/car/1" className="fleet-link">View Suzuki Alto Details &rarr;</a>
-                      <a href="/car/2" className="fleet-link">View Wagon R Details &rarr;</a>
+                      <Link to="/car/1" className="fleet-link">View Suzuki Alto Details &rarr;</Link>
+                      <Link to="/car/2" className="fleet-link">View Wagon R Details &rarr;</Link>
                     </div>
                   </div>
                 </div>
@@ -368,8 +369,8 @@ function BlogPage() {
                       <li><span>Best For:</span> Family travel, intercity trips, corporate travel</li>
                     </ul>
                     <div className="fleet-item__links">
-                      <a href="/car/3" className="fleet-link">View Toyota Corolla Details &rarr;</a>
-                      <a href="/car/4" className="fleet-link">View Toyota Yaris Details &rarr;</a>
+                      <Link to="/car/3" className="fleet-link">View Toyota Corolla Details &rarr;</Link>
+                      <Link to="/car/4" className="fleet-link">View Toyota Yaris Details &rarr;</Link>
                     </div>
                   </div>
                 </div>
@@ -385,15 +386,15 @@ function BlogPage() {
                       <li><span>Best For:</span> Weddings, VIP guests, executive corporate travel</li>
                     </ul>
                     <div className="fleet-item__links">
-                      <a href="/car/5" className="fleet-link">View Toyota Grande Details &rarr;</a>
-                      <a href="/car/6" className="fleet-link">View KIA Sportage Details &rarr;</a>
+                      <Link to="/car/5" className="fleet-link">View Toyota Grande Details &rarr;</Link>
+                      <Link to="/car/6" className="fleet-link">View KIA Sportage Details &rarr;</Link>
                     </div>
                   </div>
                 </div>
               </div>
 
               <p>
-                Browse our complete collection of models on our <a href="/cars-fleet-for-rent">fleet catalog page</a> to find the exact vehicle matching your preference.
+                Browse our complete collection of models on our <Link to="/cars-fleet-for-rent">fleet catalog page</Link> to find the exact vehicle matching your preference.
               </p>
             </section>
 
@@ -404,7 +405,7 @@ function BlogPage() {
                 <p><strong>Quick Summary:</strong> Daily car rentals offer flexible 24-hour vehicle booking for single-day errands, family visits, city tours, or short business trips across Bahria Town and Lahore.</p>
               </div>
               <p>
-                When you only require a vehicle for a specific occasion or day-long itinerary, daily car rental provides maximum flexibility without long-term contractual commitments. Whether you need a <a href="/car/1">Suzuki Alto AGS</a> for quick market runs in Bahria Town Sector C or a <a href="/car/3">Toyota Corolla</a> for visiting relatives across Lahore, daily rentals are structured to give you complete freedom.
+                When you only require a vehicle for a specific occasion or day-long itinerary, daily car rental provides maximum flexibility without long-term contractual commitments. Whether you need a <Link to="/car/1">Suzuki Alto AGS</Link> for quick market runs in Bahria Town Sector C or a <Link to="/car/3">Toyota Corolla</Link> for visiting relatives across Lahore, daily rentals are structured to give you complete freedom.
               </p>
               <p>
                 Key benefits of daily car rentals include:
@@ -448,7 +449,7 @@ function BlogPage() {
                 <li><strong>Zero Parking Stress:</strong> Get dropped off directly at building entrances while your driver handles parking arrangements.</li>
               </ul>
               <p>
-                Explore more details on our <a href="/#our-car-rental-services-in-lahore">Services page</a> regarding chauffeur arrangements for executive travel and outstation tours.
+                Explore more details on our <Link to="/#our-services">Services page</Link> regarding chauffeur arrangements for executive travel and outstation tours.
               </p>
             </section>
 
@@ -462,7 +463,7 @@ function BlogPage() {
                 For drivers who value complete privacy during their journey, self-drive rentals allow you to operate the vehicle yourself. Whether commuting to personal engagements or taking a private road trip, self-drive options provide total autonomy over your itinerary.
               </p>
               <p>
-                Because safety and security are paramount, self-drive car rentals at New Ali Lajpal are provided subject to explicit document verification—including a valid original CNIC, active driving license, and standard security checks. To confirm self-drive eligibility for a specific car model such as the <a href="/car/4">Toyota Yaris</a> or <a href="/car/5">Toyota Grande</a>, feel free to <a href="/#contact-us-for-car-rental">contact our Bahria Town rental desk</a>.
+                Because safety and security are paramount, self-drive car rentals at New Ali Lajpal are provided subject to explicit document verification—including a valid original CNIC, active driving license, and standard security checks. To confirm self-drive eligibility for a specific car model such as the <Link to="/car/4">Toyota Yaris</Link> or <Link to="/car/5">Toyota Grande</Link>, feel free to <Link to="/#contact-us">contact our Bahria Town rental desk</Link>.
               </p>
             </section>
 
@@ -476,7 +477,7 @@ function BlogPage() {
                 Allama Iqbal International Airport (LHE) is located approximately 35 to 45 kilometers from Bahria Town Lahore, depending on whether you take the Lahore Ring Road or Canal Bank Road. Arranging an advance airport transfer guarantees that a comfortable, air-conditioned car and professional chauffeur will be waiting for you upon landing, regardless of flight arrival times or delays.
               </p>
               <p>
-                Whether arriving on late-night international flights or heading out for early-morning domestic departures, pre-booking your airport car rental with comfortable sedans like the <a href="/car/3">Toyota Corolla</a> or <a href="/car/7">Honda Civic</a> eliminates long taxi queues and unpredictable airport fare markups.
+                Whether arriving on late-night international flights or heading out for early-morning domestic departures, pre-booking your airport car rental with comfortable sedans like the <Link to="/car/3">Toyota Corolla</Link> or <Link to="/car/7">Honda Civic</Link> eliminates long taxi queues and unpredictable airport fare markups.
               </p>
             </section>
 
@@ -493,9 +494,9 @@ function BlogPage() {
                 Recommended family vehicles include:
               </p>
               <ul className="article-list">
-                <li><strong>For Small Families (3-4 passengers):</strong> Compact hatchbacks like <a href="/car/2">Suzuki Wagon R</a> or sedans like <a href="/car/3">Toyota Corolla</a>.</li>
-                <li><strong>For Medium & Large Families (5+ passengers):</strong> Spacious crossovers like <a href="/car/6">KIA Sportage</a> providing higher ground clearance and expandable cargo room.</li>
-                <li><strong>For Multi-Generational Family Groups (7+ passengers):</strong> 7-seater vehicles like the <a href="/car/8">Honda BR-V</a> or passenger vans like the <a href="/car/18">Toyota Coaster</a> offering maximum seating capacity for extended family tours.</li>
+                <li><strong>For Small Families (3-4 passengers):</strong> Compact hatchbacks like <Link to="/car/2">Suzuki Wagon R</Link> or sedans like <Link to="/car/3">Toyota Corolla</Link>.</li>
+                <li><strong>For Medium & Large Families (5+ passengers):</strong> Spacious crossovers like <Link to="/car/6">KIA Sportage</Link> providing higher ground clearance and expandable cargo room.</li>
+                <li><strong>For Multi-Generational Family Groups (7+ passengers):</strong> 7-seater vehicles like the <Link to="/car/8">Honda BR-V</Link> or passenger vans like the <Link to="/car/18">Toyota Coaster</Link> offering maximum seating capacity for extended family tours.</li>
               </ul>
             </section>
 
@@ -506,7 +507,7 @@ function BlogPage() {
                 <p><strong>Quick Summary:</strong> Business car rentals provide sleek executive sedans and punctual chauffeured services for corporate delegation visits, client meetings, and official travel in Lahore.</p>
               </div>
               <p>
-                Corporate travel demands absolute punctuality, professional presentation, and comfortable spaces where executives can review documents or take phone calls while on the move. Renting executive vehicles like the <a href="/car/5">Toyota Corolla Grande</a> or <a href="/car/4">Toyota Yaris</a> creates an immediate professional impression for visiting corporate delegates, investors, or VIP clients.
+                Corporate travel demands absolute punctuality, professional presentation, and comfortable spaces where executives can review documents or take phone calls while on the move. Renting executive vehicles like the <Link to="/car/5">Toyota Corolla Grande</Link> or <Link to="/car/4">Toyota Yaris</Link> creates an immediate professional impression for visiting corporate delegates, investors, or VIP clients.
               </p>
               <p>
                 Corporate accounts with New Ali Lajpal benefit from priority booking confirmation, customized billing invoices, and dedicated drivers trained in professional business etiquette.
@@ -520,7 +521,7 @@ function BlogPage() {
                 <p><strong>Quick Summary:</strong> Wedding car rentals deliver stylish luxury sedans and decorated vehicles for Barat, Walima, groom entries, and guest convoy transportation across Lahore.</p>
               </div>
               <p>
-                Weddings in Lahore are celebrated with magnificence, and transportation plays a central role in event logistics. From providing a spotless, elegant groom car like the <a href="/car/5">Toyota Grande</a> or <a href="/car/6">KIA Sportage</a> to arranging fleet sedans for family convoys, renting vehicles ensures all guests travel comfortably between ceremony venues in Bahria Town, Gulberg, or Raiwind Road.
+                Weddings in Lahore are celebrated with magnificence, and transportation plays a central role in event logistics. From providing a spotless, elegant groom car like the <Link to="/car/5">Toyota Grande</Link> or <Link to="/car/6">KIA Sportage</Link> to arranging fleet sedans for family convoys, renting vehicles ensures all guests travel comfortably between ceremony venues in Bahria Town, Gulberg, or Raiwind Road.
               </p>
               <p>
                 Special event arrangements can be tailored with optional floral decoration services and experienced chauffeurs dressed appropriately for formal occasions.
@@ -549,9 +550,9 @@ function BlogPage() {
               <h3>Ready to Book Your Rental Car in Bahria Town Lahore?</h3>
               <p>Experience reliable service, clean vehicles, transparent pricing, and 24/7 customer support with New Ali Lajpal Rent A Car.</p>
               <div className="article-cta-banner__buttons">
-                <a href="/cars-fleet-for-rent" className="btn btn-primary btn-lg">
+                <Link to="/cars-fleet-for-rent" className="btn btn-primary btn-lg">
                   View Full Car Fleet
-                </a>
+                </Link>
                 <a href="https://wa.me/923057649991" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
                   Instant WhatsApp Booking
                 </a>

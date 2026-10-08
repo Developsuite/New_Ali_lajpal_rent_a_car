@@ -1,28 +1,51 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const navLinks = [
-  { id: 'home', label: 'Home' },
-  { id: 'our-cars', label: 'Our Cars' },
-  { id: 'our-services', label: 'Services' },
-  { id: 'why-choose', label: 'Why Choose Us' },
-  { id: 'blog', label: 'Blog' },
-  { id: 'our-reviews', label: 'Reviews' },
-  { id: 'contact-us', label: 'Contact Us' },
+  { id: 'home', label: 'Home', path: '/' },
+  { id: 'our-cars', label: 'Our Cars', path: '/cars-fleet-for-rent' },
+  { id: 'our-services', label: 'Services', path: '/#our-services', targetId: 'our-services' },
+  { id: 'why-choose', label: 'Why Choose Us', path: '/#why-choose', targetId: 'why-choose' },
+  { id: 'blog', label: 'Blog', path: '/blog' },
+  { id: 'our-reviews', label: 'Reviews', path: '/#our-reviews', targetId: 'our-reviews' },
+  { id: 'contact-us', label: 'Contact Us', path: '/#contact-us', targetId: 'contact-us' },
 ];
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // ScrollSpy on homepage to highlight current section
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+
+    const sections = ['contact-us', 'our-reviews', 'our-services', 'why-choose', 'home'];
+    const handleScrollSpy = () => {
+      const scrollPos = window.scrollY + 140;
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(sectionId);
+          break;
+        }
+      }
+    };
+
+    handleScrollSpy();
+    window.addEventListener('scroll', handleScrollSpy, { passive: true });
+    return () => window.removeEventListener('scroll', handleScrollSpy);
+  }, [location.pathname]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -34,41 +57,78 @@ function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [isMobileMenuOpen]);
 
-  const handleNavClick = (id) => {
-    setActiveLink(id);
+  const handleNavClick = (e, link) => {
     setIsMobileMenuOpen(false);
+
+    if (link.id === 'home') {
+      if (location.pathname === '/') {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (location.hash) {
+          window.history.pushState(null, '', '/');
+        }
+      }
+      return;
+    }
+
+    if (link.targetId && location.pathname === '/') {
+      e.preventDefault();
+      const element = document.getElementById(link.targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', `/#${link.targetId}`);
+        setActiveSection(link.targetId);
+      }
+    }
   };
 
-  const getHref = (id) => {
-    if (id === 'our-cars') return '/cars-fleet-for-rent';
-    if (id === 'blog') return '/blog';
-    return `/#${id}`;
+  const isLinkActive = (link) => {
+    if (location.pathname === '/blog') {
+      return link.id === 'blog';
+    }
+    if (location.pathname === '/cars-fleet-for-rent' || location.pathname.startsWith('/car/')) {
+      return link.id === 'our-cars';
+    }
+    if (location.pathname === '/') {
+      if (location.hash) {
+        const currentHash = location.hash.replace('#', '');
+        if (link.targetId === currentHash || link.id === currentHash) return true;
+      }
+      if (link.id === 'home' && activeSection === 'home' && !location.hash) return true;
+      if (link.targetId === activeSection) return true;
+    }
+    return false;
   };
 
   return (
     <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`} id="navbar">
       <div className="container navbar__container">
         {/* Logo */}
-        <a href="/#best-car-rental-service-lahore" className="navbar__logo" onClick={() => handleNavClick('home')}>
+        <Link
+          to="/"
+          className="navbar__logo"
+          onClick={(e) => handleNavClick(e, { id: 'home', path: '/' })}
+          aria-label="New Ali Lajpal Rent A Car Home"
+        >
           <img
             src="/imagess/Logo/2.png"
             alt="New Ali Lajpal Rent A Car"
             className="navbar__logo-img"
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
           <ul className="navbar__links">
             {navLinks.map((link) => (
               <li key={link.id}>
-                <a
-                  href={getHref(link.id)}
-                  className={`navbar__link ${activeLink === link.id ? 'navbar__link--active' : ''}`}
-                  onClick={() => handleNavClick(link.id)}
+                <Link
+                  to={link.path}
+                  className={`navbar__link ${isLinkActive(link) ? 'navbar__link--active' : ''}`}
+                  onClick={(e) => handleNavClick(e, link)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -104,13 +164,13 @@ function Navbar() {
           <ul className="navbar__mobile-links">
             {navLinks.map((link, index) => (
               <li key={link.id} style={{ animationDelay: `${index * 0.06}s` }}>
-                <a
-                  href={getHref(link.id)}
-                  className={`navbar__mobile-link ${activeLink === link.id ? 'navbar__mobile-link--active' : ''}`}
-                  onClick={() => handleNavClick(link.id)}
+                <Link
+                  to={link.path}
+                  className={`navbar__mobile-link ${isLinkActive(link) ? 'navbar__mobile-link--active' : ''}`}
+                  onClick={(e) => handleNavClick(e, link)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
